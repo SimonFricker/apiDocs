@@ -1,14 +1,25 @@
 .apiDocs{
 
-  // *, *:before, *:after {
-  //   box-sizing: border-box;
-  // }
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
 .container{
       display: flex;
 }
+
+.relative {
+    position: relative;
+}
+
   .nav{
     @include grid-column(2, $custom-neat-grid);
     background: rgba(0,0,0,.2);
+
+    #navInner{
+      background: red;
+      height: 1000px;
+      border-bottom: 20px solid black;
+    }
   }
   .content{
     @include grid-column(10, $custom-neat-grid);
@@ -18,21 +29,21 @@
       display: flex;
       // flex: 1;
 
-       min-height: 600px;
+       min-height: 1600px;
 
        .method-description{
          @include grid-column(6,$custom-neat-grid);
-         flex: 1;
+        //  flex: 1;
          font-size: 1.8rem;
-        //  padding: 2.4rem;
+         padding: 2.4rem;
        }
 
        .method-example{
          @include grid-column(6,$custom-neat-grid);
          background: #222222;
-         flex: 1;
+        //  flex: 1;
          font-size: 1.6rem;
-        //  padding: 2.4rem;
+         padding: 2.4rem;
        }
     }
   }

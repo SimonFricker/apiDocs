@@ -1,6 +1,14 @@
 console.log('apiDocs started');
+// navbar
 
-hljs.initHighlightingOnLoad();
+$("#navInner").stick_in_parent();
+
+$(window).on("load resize scroll",function(e){
+    hljs.initHighlightingOnLoad();
+});
+
+
+
 
 //smoothscroll
 // Select all links with hashes
