@@ -14,12 +14,14 @@ y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scrol
 console.log('apiDocs started');
 // navbar
 
-$("#navInner").stick_in_parent();
+
 
 $(window).on("load resize scroll",function(e){
-    hljs.initHighlightingOnLoad();
+$("#navInner").stick_in_parent();
 });
 
+
+    hljs.initHighlightingOnLoad();
 
 
 
