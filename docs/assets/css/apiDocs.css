@@ -448,14 +448,10 @@ html {
 body {
   font-size: 1.8rem; }
 
-.container {
-  margin-left: -20px;
-  margin-right: -20px;
-  width: calc(100% + 40px); }
-  .container::after {
-    clear: both;
-    content: "";
-    display: block; }
+.container::after {
+  clear: both;
+  content: "";
+  display: block; }
 
 .btn-submit {
   height: 4.8rem;
@@ -479,42 +475,38 @@ body {
   .btn-submit.-right {
     float: right; }
 
-.apiDocs {
+.apiDocs .container {
   display: -ms-flexbox;
-  display: flex;
+  display: flex; }
+
+.apiDocs .nav {
+  width: calc(16.66667%);
+  float: left;
+  margin-left: 0;
+  background: rgba(0, 0, 0, 0.2); }
+
+.apiDocs .content {
+  width: calc(83.33333%);
+  float: left;
+  margin-left: 0;
   -ms-flex: 1;
   flex: 1; }
-  .apiDocs .nav {
-    width: calc(25%);
-    float: left;
-    margin-left: 0;
-    background: rgba(0, 0, 0, 0.2);
-    -ms-flex: 1;
-    flex: 1; }
-  .apiDocs .content {
-    width: calc(75%);
-    float: left;
-    margin-left: 0;
-    -ms-flex: 1;
-    flex: 1; }
-    .apiDocs .content .method {
-      display: -ms-flexbox;
-      display: flex;
+  .apiDocs .content .method {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 600px; }
+    .apiDocs .content .method .method-description {
+      width: calc(50%);
+      float: left;
+      margin-left: 0;
       -ms-flex: 1;
       flex: 1;
-      min-height: 600px; }
-      .apiDocs .content .method .method-description {
-        width: calc(50%);
-        float: left;
-        margin-left: 0;
-        -ms-flex: 1;
-        flex: 1;
-        font-size: 1.8rem; }
-      .apiDocs .content .method .method-example {
-        width: calc(50%);
-        float: left;
-        margin-left: 0;
-        background: #222222;
-        -ms-flex: 1;
-        flex: 1;
-        font-size: 1.6rem; }
+      font-size: 1.8rem; }
+    .apiDocs .content .method .method-example {
+      width: calc(50%);
+      float: left;
+      margin-left: 0;
+      background: #222222;
+      -ms-flex: 1;
+      flex: 1;
+      font-size: 1.6rem; }

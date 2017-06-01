@@ -1,18 +1,22 @@
 .apiDocs{
-  display: flex;
-  flex: 1;
+
+  // *, *:before, *:after {
+  //   box-sizing: border-box;
+  // }
+.container{
+      display: flex;
+}
   .nav{
-    @include grid-column(3, $custom-neat-grid);
+    @include grid-column(2, $custom-neat-grid);
     background: rgba(0,0,0,.2);
-   flex: 1;
   }
   .content{
-    @include grid-column(9, $custom-neat-grid);
-flex: 1;
+    @include grid-column(10, $custom-neat-grid);
+    flex: 1;
 
     .method{
-       display: flex;
-      flex: 1;
+      display: flex;
+      // flex: 1;
 
        min-height: 600px;
 
@@ -20,6 +24,7 @@ flex: 1;
          @include grid-column(6,$custom-neat-grid);
          flex: 1;
          font-size: 1.8rem;
+        //  padding: 2.4rem;
        }
 
        .method-example{
@@ -27,6 +32,7 @@ flex: 1;
          background: #222222;
          flex: 1;
          font-size: 1.6rem;
+        //  padding: 2.4rem;
        }
     }
   }
