@@ -1,0 +1,25 @@
+.btn-submit {
+  height: $baseHeight;
+  border-radius: $baseBorderRadius;
+  color: rgba(255,255,255,1);
+  background: $themeColor;
+  font-size: $baseFontSize;
+  padding: 0 $basePadding*2;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+
+  &:hover {
+    outline: none;
+    background: darken($themeColor, 6);
+  }
+
+  &.-block {
+    display: block;
+    width: 100%;
+  }
+
+  &.-right{
+    float: right;
+  }
+}

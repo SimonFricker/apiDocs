@@ -1,0 +1,44 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', cursive; }
+
+h1 {
+  font-size: 2.8rem; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-size: 18px; }
+
+input, legend {
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 90%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  @media only screen and (min-width: 480px) {
+    .container {
+      width: 80%; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      width: 60%; } }
+  @media only screen and (min-width: 992px) {
+    .container {
+      width: 40%; } }
+
+.demo .container {
+  background: white;
+  padding: 3rem;
+  border-radius: .4rem;
+  margin: 6em auto; }

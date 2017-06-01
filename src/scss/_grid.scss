@@ -1,0 +1,13 @@
+$custom-neat-grid: (
+  columns: 12,
+  gutter: 0,
+  media: 100%,
+);
+
+
+
+
+.container{
+  @include grid-container();
+   @include grid-collapse();
+}
