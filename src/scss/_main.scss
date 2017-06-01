@@ -13,23 +13,44 @@
 
   .nav{
     @include grid-column(2, $custom-neat-grid);
-    background: rgba(0,0,0,.2);
+      border-right: 1px solid black;
+      background: #186C99;
 
     #navInner{
-      background: red;
       height: 1000px;
       border-bottom: 20px solid black;
+
+      .header{
+        text-align: center;
+        padding: 1.5rem 1rem;
+
+      }
+      ul{
+        margin-top: 0;
+      }
     }
   }
   .content{
     @include grid-column(10, $custom-neat-grid);
     flex: 1;
+    position: relative;
+
+    .examples{
+      display: flex;
+      @include grid-column(6,$custom-neat-grid);
+      // @include grid-push(2);
+      // flex: 1;
+      position: absolute;
+      top:0;
+      right:0;
+      position: fixed;
+    }
 
     .method{
       display: flex;
       // flex: 1;
-
        min-height: 1600px;
+       border-bottom: 1px solid black;
 
        .method-description{
          @include grid-column(6,$custom-neat-grid);

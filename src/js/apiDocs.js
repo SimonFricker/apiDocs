@@ -5,8 +5,13 @@ console.log('apiDocs started');
 
 $(window).on("load resize scroll",function(e){
 $("#navInner").stick_in_parent();
-});
 
+var widthss = $(".method-example").width();
+$(".examples").width(widthss);
+
+
+
+});
 
     hljs.initHighlightingOnLoad();
 

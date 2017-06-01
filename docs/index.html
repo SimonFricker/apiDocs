@@ -3,13 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
-  <![endif]-->
-
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/apiDocs.css">
   <title>
     apiDocs - Simple API doc styles for your project
@@ -22,7 +16,10 @@
     <div class="container">
 
       <div class="nav">
-        <div id="navInner">      
+        <div id="navInner">
+          <div class="header">
+            <h1>apiDocs</h1>
+          </div>
           <div class="docsNav">
             <ul>
               <li>
@@ -36,6 +33,20 @@
         </div>
       </div>
       <div class="content">
+        <div class="examples">
+        <ul class="language">
+          <li>
+            <a class="" href="#">php</a>
+          </li>
+          <li>
+            <a class="" href="#">cURL</a>
+          </li>
+          <li>
+            <a class="" href="#">etc</a>
+          </li>
+      </ul>
+      </div>
+
         <div class="method" id="calling">
           <div class="method-description">
             <h1>Calling</h1> Bacon ipsum dolor amet chuck tongue shank, porchetta brisket swine drumstick pork chop ball tip jerky andouille cow venison beef tenderloin. Corned beef jowl chuck turkey, tail pancetta frankfurter pig t-bone cow porchetta. Pork
@@ -44,23 +55,23 @@
           </div>
           <div class="method-example">
             <pre><code>
-              function Shape(){
-                // this is a comment
-                this.name = 'Shape';
-                this.toString = function(){return this.name;};
-              }
+function Shape(){
+  // this is a comment
+  this.name = 'Shape';
+  this.toString = function(){return this.name;};
+}
 
 
-              function Shape2D(){
-                this.name = 'Shape 2D';
-              }
+function Shape2D(){
+  this.name = 'Shape 2D';
+}
 
-              function Triangle(base,height){
-                this.name = 'Triangle';
-                this.base = base;
-                this.height = height;
-                this.getArea = function(){return this.base*this.height/2;};
-              }
+function Triangle(base,height){
+  this.name = 'Triangle';
+  this.base = base;
+  this.height = height;
+  this.getArea = function(){return this.base*this.height/2;};
+}
 
             </code></pre>
           </div>
@@ -78,46 +89,32 @@
           </div>
           <div class="method-example">
             <pre><code>
-              function Shape(){
-                // this is a comment
-                this.name = 'Shape';
-                this.toString = function(){return this.name;};
-              }
+function Shape(){
+  // this is a comment
+  this.name = 'Shape';
+  this.toString = function(){return this.name;};
+}
 
 
-              function Shape2D(){
-                this.name = 'Shape 2D';
-              }
+function Shape2D(){
+  this.name = 'Shape 2D';
+}
 
-              function Triangle(base,height){
-                this.name = 'Triangle';
-                this.base = base;
-                this.height = height;
-                this.getArea = function(){return this.base*this.height/2;};
-              }
+function Triangle(base,height){
+  this.name = 'Triangle';
+  this.base = base;
+  this.height = height;
+  this.getArea = function(){return this.base*this.height/2;};
+}
 
             </code></pre>
           </div>
         </div>
-
-
-
-
-
-
-
-
       </div>
-
     </div>
   </section>
 
-  <!-- <div class="eamples">
 
-  <ul class="language">
-
-</ul>
-</div> -->
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>

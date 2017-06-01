@@ -453,6 +453,32 @@ body {
   content: "";
   display: block; }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 0; }
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: .4rem; }
+
+h2 {
+  font-size: 2.4rem; }
+
+h3 {
+  font-size: 2.2rem; }
+
+h4 {
+  font-size: 2rem; }
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 2; }
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem; }
+
 .btn-submit {
   height: 4.8rem;
   border-radius: 6px;
@@ -489,22 +515,39 @@ body {
   width: calc(16.66667%);
   float: left;
   margin-left: 0;
-  background: rgba(0, 0, 0, 0.2); }
+  border-right: 1px solid black;
+  background: #186C99; }
   .apiDocs .nav #navInner {
-    background: red;
     height: 1000px;
     border-bottom: 20px solid black; }
+    .apiDocs .nav #navInner .header {
+      text-align: center;
+      padding: 1.5rem 1rem; }
+    .apiDocs .nav #navInner ul {
+      margin-top: 0; }
 
 .apiDocs .content {
   width: calc(83.33333%);
   float: left;
   margin-left: 0;
   -ms-flex: 1;
-  flex: 1; }
+  flex: 1;
+  position: relative; }
+  .apiDocs .content .examples {
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(50%);
+    float: left;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    position: fixed; }
   .apiDocs .content .method {
     display: -ms-flexbox;
     display: flex;
-    min-height: 1600px; }
+    min-height: 1600px;
+    border-bottom: 1px solid black; }
     .apiDocs .content .method .method-description {
       width: calc(50%);
       float: left;
