@@ -552,7 +552,6 @@ body {
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     background: #f5f5f5; }
     .apiDocs .nav #navInner {
-      height: 1000px;
       border-bottom: 20px solid black; }
       .apiDocs .nav #navInner .header {
         text-align: center;
@@ -568,53 +567,75 @@ body {
             color: rgba(0, 0, 0, 0.54); }
           .apiDocs .nav #navInner ul li.active {
             background: #dedede; }
-  .apiDocs .content {
+  .apiDocs .wrap {
     width: calc(83.33333%);
     float: left;
-    margin-left: 0;
-    -ms-flex: 1;
-    flex: 1;
-    position: relative; }
-    .apiDocs .content .setLang {
-      display: -ms-flexbox;
-      display: flex;
-      width: calc(50%);
+    margin-left: 0; }
+    .apiDocs .wrap .header {
+      padding: 8.4rem 2.4rem; }
+      .apiDocs .wrap .header h1 {
+        font-size: 3em; }
+    .apiDocs .wrap .content {
+      width: calc(100%);
       float: left;
       margin-left: 0;
-      position: absolute;
-      top: 0;
-      right: 0;
-      position: fixed;
-      background: black; }
-      .apiDocs .content .setLang ul {
-        margin-top: 0;
-        list-style: none;
-        padding: 0; }
-        .apiDocs .content .setLang ul li {
-          padding: 0.6rem 1rem;
-          display: block;
-          float: left; }
-    .apiDocs .content .method {
-      display: -ms-flexbox;
-      display: flex;
-      min-height: 1600px;
-      border-bottom: 1px solid black; }
-      .apiDocs .content .method .method-description {
+      -ms-flex: 1;
+      flex: 1;
+      position: relative; }
+      .apiDocs .wrap .content .setLang {
+        display: -ms-flexbox;
+        display: flex;
         width: calc(50%);
         float: left;
         margin-left: 0;
-        font-size: 1.8rem;
-        padding: 2.4rem;
-        background: #FCFCFC;
-        border-right: 1px solid rgba(0, 0, 0, 0.12); }
-        .apiDocs .content .method .method-description code {
+        display: block;
+        top: 0;
+        right: 0;
+        position: absolute;
+        background: #dddddd; }
+        .apiDocs .wrap .content .setLang ul {
+          margin: 0;
+          list-style: none;
+          padding: 0;
+          display: inline-block; }
+          .apiDocs .wrap .content .setLang ul li {
+            display: block;
+            float: left;
+            margin: .4rem 1rem;
+            cursor: pointer;
+            padding: .4rem 1rem;
+            font-size: 1.6rem;
+            border: 1px solid transparent; }
+            .apiDocs .wrap .content .setLang ul li.current {
+              background: #bfbfbf;
+              border: 1px solid lightgray;
+              border-radius: 1rem; }
+      .apiDocs .wrap .content .method {
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 1000px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+        .apiDocs .wrap .content .method .method-description {
+          width: calc(50%);
+          float: left;
+          margin-left: 0;
+          font-size: 1.8rem;
+          padding: 2.4rem;
+          background: #FCFCFC; }
+          .apiDocs .wrap .content .method .method-description code {
+            background: #ededed;
+            border-radius: .4rem;
+            padding: .4rem .8rem; }
+        .apiDocs .wrap .content .method .method-example {
+          width: calc(50%);
+          float: left;
+          margin-left: 0;
           background: #ededed;
-          border-radius: .4rem;
-          padding: .4rem .8rem; }
-      .apiDocs .content .method .method-example {
-        width: calc(50%);
-        float: left;
-        margin-left: 0;
-        background: #fafafa;
-        font-size: 1.6rem;
-        padding: 2.4rem; }
+          font-size: 1.6rem;
+          padding: 2.4rem; }
+          .apiDocs .wrap .content .method .method-example .tab-content {
+            display: none; }
+            .apiDocs .wrap .content .method .method-example .tab-content.current {
+              display: block; }
+          .apiDocs .wrap .content .method .method-example .hljs {
+            background: #ededed; }

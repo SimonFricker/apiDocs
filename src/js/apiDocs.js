@@ -4,9 +4,11 @@ console.log('apiDocs started');
 
 
 $(window).on("load resize scroll",function(e){
-$("#navInner").stick_in_parent();
 
+$("#navInner").stick_in_parent();
+$(".setLang").stick_in_parent();
 var widthss = $(".method-example").outerWidth();
+
 $(".setLang").width(widthss);
 
 
@@ -107,15 +109,33 @@ $(window).scroll(function(){
 
 
 ///load json
+//
+// $.ajax({
+//     url: "apiDocs.json",
+//     dataType: "json",
+//     success: function(data) {
+//         console.log(data);
+//         $('body').append(data.employees[0].firstName);
+//     },
+//     error: function(jqXHR, textStatus, errorThrown) {
+//         console.log('ERROR', textStatus, errorThrown);
+//     }
+// });
+//
 
-$.ajax({
-    url: "apiDocs.json",
-    dataType: "json",
-    success: function(data) {
-        console.log(data);
-        $('body').append(data.employees[0].firstName);
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-        console.log('ERROR', textStatus, errorThrown);
-    }
-});
+
+//// tabs
+
+$(document).ready(function(){
+
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("."+tab_id).addClass('current');
+	})
+
+})
