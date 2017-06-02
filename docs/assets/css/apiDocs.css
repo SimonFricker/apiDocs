@@ -555,13 +555,19 @@ body {
       border-bottom: 20px solid black; }
       .apiDocs .nav #navInner .header {
         text-align: center;
-        padding: 1.5rem 1rem; }
+        padding: 4.2rem 1.4rem 1.4rem; }
+      .apiDocs .nav #navInner .version {
+        padding: 0.7rem 1.4rem;
+        text-align: center; }
+        .apiDocs .nav #navInner .version select {
+          background: green;
+          color: white; }
       .apiDocs .nav #navInner ul {
         margin-top: 0;
         list-style: none;
         padding: 0; }
         .apiDocs .nav #navInner ul li {
-          padding: 0.6rem 1rem; }
+          padding: 0.7rem 1.4rem; }
           .apiDocs .nav #navInner ul li a {
             text-decoration: none;
             color: rgba(0, 0, 0, 0.54); }
@@ -572,7 +578,8 @@ body {
     float: left;
     margin-left: 0; }
     .apiDocs .wrap .header {
-      padding: 8.4rem 2.4rem; }
+      padding: 16.8rem 2.8rem 2.8rem;
+      display: inline-block; }
       .apiDocs .wrap .header h1 {
         font-size: 3em; }
     .apiDocs .wrap .content {
@@ -620,7 +627,7 @@ body {
           float: left;
           margin-left: 0;
           font-size: 1.8rem;
-          padding: 2.4rem;
+          padding: 2.8rem;
           background: #FCFCFC; }
           .apiDocs .wrap .content .method .method-description code {
             background: #ededed;
@@ -632,7 +639,7 @@ body {
           margin-left: 0;
           background: #ededed;
           font-size: 1.6rem;
-          padding: 2.4rem; }
+          padding: 2.8rem; }
           .apiDocs .wrap .content .method .method-example .tab-content {
             display: none; }
             .apiDocs .wrap .content .method .method-example .tab-content.current {
