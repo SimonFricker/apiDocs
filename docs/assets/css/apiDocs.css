@@ -556,6 +556,20 @@ body {
       .apiDocs .nav #navInner .header {
         text-align: center;
         padding: 4.2rem 1.4rem 1.4rem; }
+      .apiDocs .nav #navInner .search {
+        display: block;
+        padding: 1.4rem; }
+        .apiDocs .nav #navInner .search input {
+          font-size: 1.4rem;
+          border-radius: 4rem;
+          margin: 0 auto;
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          height: 4.6rem;
+          width: 100%;
+          outline: none; }
+          .apiDocs .nav #navInner .search input:hover, .apiDocs .nav #navInner .search input :focus {
+            border: 1px solid rgba(17, 15, 123, 0.8);
+            outline: none; }
       .apiDocs .nav #navInner .version {
         padding: 0.7rem 1.4rem;
         text-align: center; }

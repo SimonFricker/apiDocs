@@ -149,52 +149,14 @@ $(document).ready(function(){
 })
 
 
-// 
-//
-// $(document).ready(function(){
-//
-// 	$('ul.tabs li').click(function(){
-// 		var tab_id = $(this).attr('data-tab');
-//
-//     $('ul.tabs li').removeClass('current');
-//     $('.tab-content').removeClass('current');
-//
-//
-//       $('ul.tabs li').find("[data-tab='" + tab_id + "']").addClass('current');
-//       // $("."+tab_id).find("[data-tab='" + tab_id + "']").addClass('current');
-//
-// 		// $(this).addClass('current');
-// 		$("."+tab_id).addClass('current');
-// 	})
-//
-// })
+// Language tabs
 
 $(document).ready(function(){
-
 	$('ul.tabs li').click(function(){
 		var tab_id = $(this).attr('data-tab');
-
 		$('ul.tabs li').removeClass('current');
 		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
 		$('[data-tab="'+tab_id+'"]').addClass('current');
+    $("."+tab_id).addClass('current');
 	})
-
 })
-
-
-//
-// $(document).ready(function(){
-//
-// 	$('ul.tabs li').click(function(){
-// 		var tab_id = $(this).attr('data-tab');
-//
-// 		$('ul.tabs li').removeClass('current');
-// 		$('.tab-content').removeClass('current');
-//
-// 		$(this).addClass('current');
-// 		$("#"+tab_id).addClass('current');
-// 	})
-//
-// })
