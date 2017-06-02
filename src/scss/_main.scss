@@ -1,5 +1,10 @@
-.apiDocs{
+body{
+  position: relative;
 
+}
+
+.apiDocs{
+  font-family: $fontBody;
   *, *:before, *:after {
     box-sizing: border-box;
   }
@@ -13,8 +18,8 @@
 
   .nav{
     @include grid-column(2, $custom-neat-grid);
-      border-right: 1px solid black;
-      background: #186C99;
+      border-right: 1px solid $textDarkDivider;
+      background: #f5f5f5;
 
     #navInner{
       height: 1000px;
@@ -27,6 +32,24 @@
       }
       ul{
         margin-top: 0;
+        list-style: none;
+        padding: 0;
+
+        li{
+          padding: 0.6rem 1rem;
+
+          a{
+            text-decoration: none;
+            color: $textDarkSecondary;
+          }
+
+          &.active{
+            background: #dedede;
+          }
+
+        }
+
+
       }
     }
   }
@@ -35,7 +58,7 @@
     flex: 1;
     position: relative;
 
-    .examples{
+    .setLang{
       display: flex;
       @include grid-column(6,$custom-neat-grid);
       // @include grid-push(2);
@@ -44,6 +67,19 @@
       top:0;
       right:0;
       position: fixed;
+      background: black;
+
+      ul{
+        margin-top: 0;
+        list-style: none;
+        padding: 0;
+
+        li{
+          padding: 0.6rem 1rem;
+          display: block;
+          float: left;
+        }
+      }
     }
 
     .method{
@@ -57,11 +93,19 @@
         //  flex: 1;
          font-size: 1.8rem;
          padding: 2.4rem;
+         background: #FCFCFC;
+         border-right: 1px solid $textDarkDivider;
+
+         code{
+           background: darken(#FCFCFC,6);
+           border-radius: .4rem;
+           padding: .4rem .8rem;
+         }
        }
 
        .method-example{
          @include grid-column(6,$custom-neat-grid);
-         background: #222222;
+         background: #fafafa;
         //  flex: 1;
          font-size: 1.6rem;
          padding: 2.4rem;
