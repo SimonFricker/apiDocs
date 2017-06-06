@@ -3544,14 +3544,11 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    min-height: 50px;
     padding: 0 2.8rem;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     background: #01579b; }
     @media only screen and (min-width: 768px) {
@@ -3567,9 +3564,18 @@ body {
       float: left;
       margin-left: 0; }
       .apiDocs .nav #navInner .brand {
+        min-height: 50px;
         text-align: center;
+        float: left;
         color: white;
-        display: inline-block; }
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
         .apiDocs .nav #navInner .brand h1 {
           margin: 0; }
         @media only screen and (min-width: 768px) {
@@ -3578,53 +3584,66 @@ body {
             display: block;
             float: none; } }
       .apiDocs .nav #navInner .menu-toggle {
+        min-height: 50px;
         display: inline-block;
-        float: right; }
+        float: right;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
         @media only screen and (min-width: 768px) {
           .apiDocs .nav #navInner .menu-toggle {
             display: none; } }
-        .apiDocs .nav #navInner .menu-toggle .btnToggle {
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -ms-flex-align: center;
-          align-items: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          height: 20px; }
-          .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle {
-            width: 30px;
-            height: 1px;
-            margin-bottom: 3px;
-            background-color: white;
-            display: block; }
-            .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle:last-of-type {
-              margin-bottom: 0; }
+        .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle {
+          width: 30px;
+          height: 1px;
+          margin-bottom: 3px;
+          background-color: white;
+          display: block; }
+          .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle:last-of-type {
+            margin-bottom: 0; }
+      .apiDocs .nav #navInner .version {
+        padding: 0.7rem 1.4rem;
+        text-align: center;
+        color: white;
+        display: inline-block;
+        float: left;
+        min-height: 50px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        @media only screen and (min-width: 768px) {
+          .apiDocs .nav #navInner .version {
+            float: none;
+            display: block; } }
+        .apiDocs .nav #navInner .version select {
+          background: transparent;
+          border-radius: 30px;
+          color: white;
+          border: 1px solid white; }
+          .apiDocs .nav #navInner .version select:focus,
+          .apiDocs .nav #navInner .version select :active,
+          .apiDocs .nav #navInner .version select :hover {
+            outline: none; }
       .apiDocs .nav #navInner .docsNav {
         display: none; }
+        .apiDocs .nav #navInner .docsNav.active {
+          display: block;
+          clear: both;
+          margin: 0 auto;
+          overflow: visible; }
         @media only screen and (min-width: 768px) {
           .apiDocs .nav #navInner .docsNav {
             display: block; } }
-        .apiDocs .nav #navInner .docsNav .version {
-          padding: 0.7rem 1.4rem;
-          text-align: center;
-          color: white;
-          display: inline-block;
-          float: left; }
-          @media only screen and (min-width: 768px) {
-            .apiDocs .nav #navInner .docsNav .version {
-              float: none;
-              display: block; } }
-          .apiDocs .nav #navInner .docsNav .version select {
-            background: transparent;
-            border-radius: 30px;
-            color: white;
-            border: 1px solid white; }
-            .apiDocs .nav #navInner .docsNav .version select:focus,
-            .apiDocs .nav #navInner .docsNav .version select :active,
-            .apiDocs .nav #navInner .docsNav .version select :hover {
-              outline: none; }
         .apiDocs .nav #navInner .docsNav .search {
           display: block;
           padding: 1.4rem; }

@@ -548,6 +548,16 @@ $('a[href^="#"]')
 gumshoe.init();
 
 
+///menu toggle
+$('#navInner .menu-toggle a').on('click', function (ev) {
+  ev.preventDefault();
+  if ($('.docsNav').hasClass('active')) {
+    $('.docsNav').removeClass('active');
+  } else {
+    $('.docsNav').addClass('active');
+  }
+});
+
 
 
 

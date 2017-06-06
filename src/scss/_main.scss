@@ -28,7 +28,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    min-height: 50px;
+
     padding: 0 $basePadding*2;
 
     // display: flex;
@@ -36,10 +36,7 @@ body {
 
 
     display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-    justify-content: center;
-
+  justify-content: space-between;
 
     border-right: 1px solid $textDarkDivider;
     background: #01579b;
@@ -54,10 +51,15 @@ body {
 
 
     #navInner {
+      //
+      // display: flex;
+      // justify-content: space-between;
 
       @include grid-column(12, $custom-neat-grid);
       .brand {
+          min-height: 50px;
         text-align: center;
+            float: left;
         // display: flex;
         // flex-direction: row;
         // align-items: center;
@@ -65,7 +67,15 @@ body {
         color: $textLightPrimary;
         // float: left;
         // align-self: flex-start;
-        display: inline-block;
+        // display: inline-block;
+
+        display: flex;
+
+        flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
 
         h1{
           margin: 0;
@@ -81,13 +91,18 @@ body {
 
 
       .menu-toggle {
+          min-height: 50px;
         // display: table;
         // margin-left: auto;
         display: inline-block;
         float: right;
 
+        display: flex;
 
+        flex-direction: column;
 
+    align-items: center;
+    justify-content: center;
 
 
         @include grid-media($neat-grid-tablet) {
@@ -96,13 +111,8 @@ body {
         }
 
         .btnToggle{
-          display: flex;
 
-    flex-direction: column;
-
-align-items: center;
-justify-content: center;
-    height: 20px;
+          // height: 20px;
 
 
           .toggle {
@@ -120,37 +130,52 @@ justify-content: center;
       }
 
 
+      .version {
+        padding: $basePadding/2 $basePadding;
+        text-align: center;
+        color: $textLightPrimary;
+        display: inline-block;
+        float: left;
+
+          min-height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include grid-media($neat-grid-tablet) {
+          float: none;
+          display: block;
+        }
+
+        select {
+          background: transparent;
+          border-radius: 30px;
+          color: $textLightPrimary;
+          border: 1px solid $textLightPrimary;
+
+          &:focus,
+          :active,
+          :hover {
+            outline: none;
+          }
+        }
+      }
 
       .docsNav {
         display: none;
+
+        &.active{
+          display: block;
+          clear: both;
+    margin: 0 auto;
+    overflow: visible;
+        }
         @include grid-media($neat-grid-tablet) {
           display: block;
         }
 
-        .version {
-          padding: $basePadding/2 $basePadding;
-          text-align: center;
-          color: $textLightPrimary;
-          display: inline-block;
-          float: left;
-          @include grid-media($neat-grid-tablet) {
-            float: none;
-            display: block;
-          }
 
-          select {
-            background: transparent;
-            border-radius: 30px;
-            color: $textLightPrimary;
-            border: 1px solid $textLightPrimary;
-
-            &:focus,
-            :active,
-            :hover {
-              outline: none;
-            }
-          }
-        }
 
         .search {
           display: block;
