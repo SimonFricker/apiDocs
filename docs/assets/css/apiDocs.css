@@ -3443,10 +3443,31 @@ html {
 body {
   font-size: 1.8rem; }
 
+/* Small screen, non-retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets and up */
+/* Medium Devices, Desktops and up */
+/* Large Devices, Wide Screens and up */
 .container::after {
   clear: both;
   content: "";
   display: block; }
+
+.col-6 {
+  border: 1px solid black;
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px; }
+  @media only screen and (min-width: 768px) {
+    .col-6 {
+      width: calc(25% - 17.5px);
+      float: left;
+      margin-left: 14px; } }
+  @media only screen and (min-width: 1200px) {
+    .col-6 {
+      width: calc(50% - 42px);
+      float: left;
+      margin-left: 28px; } }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
@@ -3504,21 +3525,37 @@ body {
   font-family: "Open Sans", sans-serif; }
   .apiDocs *, .apiDocs *:before, .apiDocs *:after {
     box-sizing: border-box; }
-  .apiDocs .container {
-    display: -ms-flexbox;
-    display: flex; }
+  @media only screen and (min-width: 768px) {
+    .apiDocs .container {
+      display: -ms-flexbox;
+      display: flex; } }
   .apiDocs .relative {
     position: relative; }
   .apiDocs .nav {
-    width: calc(16.66667%);
+    width: calc(100%);
     float: left;
     margin-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
-    background: #1565c0; }
+    background: #01579b; }
+    @media only screen and (min-width: 768px) {
+      .apiDocs .nav {
+        width: calc(16.66667%);
+        float: left;
+        margin-left: 0;
+        position: relative; } }
     .apiDocs .nav #navInner .header {
       text-align: center;
-      padding: 4.2rem 1.4rem 1.4rem;
+      display: -ms-flexbox;
+      display: flex;
       color: white; }
+      @media only screen and (min-width: 768px) {
+        .apiDocs .nav #navInner .header {
+          padding: 4.2rem 1.4rem 1.4rem;
+          display: block; } }
     .apiDocs .nav #navInner .search {
       display: block;
       padding: 1.4rem; }
@@ -3574,13 +3611,17 @@ body {
           text-decoration: none;
           color: rgba(255, 255, 255, 0.7); }
         .apiDocs .nav #navInner ul li.active {
-          background: #5e92f3; }
+          background: #4f83cc; }
           .apiDocs .nav #navInner ul li.active a {
             color: white; }
   .apiDocs .wrap {
-    width: calc(83.33333%);
-    float: left;
-    margin-left: 0; }
+    margin-top: 10rem; }
+    @media only screen and (min-width: 768px) {
+      .apiDocs .wrap {
+        width: calc(83.33333%);
+        float: left;
+        margin-left: 0;
+        margin-top: 0; } }
     .apiDocs .wrap .header {
       padding: 16.8rem 2.8rem 5.6rem;
       display: inline-block;
@@ -3589,23 +3630,28 @@ body {
       .apiDocs .wrap .header h1 {
         font-size: 3em; }
     .apiDocs .wrap .content {
-      width: calc(100%);
-      float: left;
-      margin-left: 0;
       -ms-flex: 1;
       flex: 1;
       position: relative; }
+      @media only screen and (min-width: 768px) {
+        .apiDocs .wrap .content {
+          width: calc(100%);
+          float: left;
+          margin-left: 0; } }
       .apiDocs .wrap .content .setLang {
-        display: -ms-flexbox;
-        display: flex;
-        width: calc(50%);
-        float: left;
-        margin-left: 0;
-        display: block;
-        top: 0;
-        right: 0;
-        position: absolute;
+        display: none;
         background: #e3e3e5; }
+        @media only screen and (min-width: 768px) {
+          .apiDocs .wrap .content .setLang {
+            width: calc(50%);
+            float: left;
+            margin-left: 0;
+            display: -ms-flexbox;
+            display: flex;
+            display: block;
+            top: 0;
+            right: 0;
+            position: absolute; } }
         .apiDocs .wrap .content .setLang ul {
           margin: 0;
           list-style: none;
@@ -3624,28 +3670,41 @@ body {
               border: 1px solid lightgray;
               border-radius: 1rem; }
       .apiDocs .wrap .content .method {
-        display: -ms-flexbox;
-        display: flex;
         min-height: 1000px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+        @media only screen and (min-width: 768px) {
+          .apiDocs .wrap .content .method {
+            display: -ms-flexbox;
+            display: flex; } }
         .apiDocs .wrap .content .method .method-description {
-          width: calc(50%);
+          width: calc(100%);
           float: left;
           margin-left: 0;
           font-size: 1.8rem;
           padding: 2.8rem;
           background: #FFF; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .wrap .content .method .method-description {
+              width: calc(50%);
+              float: left;
+              margin-left: 0; } }
           .apiDocs .wrap .content .method .method-description code {
             background: #ededed;
             border-radius: .4rem;
             padding: .4rem .8rem; }
         .apiDocs .wrap .content .method .method-example {
-          width: calc(50%);
+          width: calc(100%);
           float: left;
           margin-left: 0;
+          display: block;
           background: #F3F3F4;
           font-size: 1.6rem;
           padding: 2.8rem; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .wrap .content .method .method-example {
+              width: calc(50%);
+              float: left;
+              margin-left: 0; } }
           .apiDocs .wrap .content .method .method-example .tab-content {
             display: none; }
             .apiDocs .wrap .content .method .method-example .tab-content.current {

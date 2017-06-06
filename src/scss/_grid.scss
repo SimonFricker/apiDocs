@@ -7,7 +7,73 @@ $custom-neat-grid: (
 
 
 
+////end of gid settings
+$neat-grid-full: (
+  columns: 12,
+  gutter: 14px,
+  max-width: 100%
+);
+
+/* Small screen, non-retina */
+$neat-grid-mobile: (
+  columns: 12,
+  gutter: 14px,
+  media: 320px,
+);
+
+/* Extra Small Devices, Phones */
+$neat-grid-mobile: (
+  columns: 12,
+  gutter: 14px,
+  media: 480px,
+);
+
+/* Small Devices, Tablets and up */
+$neat-grid-tablet: (
+  columns: 12,
+  gutter: 14px,
+  media: 768px,
+);
+
+ /* Medium Devices, Desktops and up */
+$neat-grid-medium: (
+  columns: 12,
+  gutter: 28px,
+  media: 992px,
+);
+
+/* Large Devices, Wide Screens and up */
+$neat-grid-desktop: (
+  columns: 12,
+  gutter: 28px,
+  media: 1200px,
+);
+
+
+
 .container{
   @include grid-container();
   //  @include grid-collapse();
+}
+
+
+
+
+
+
+.col-6 {
+  border: 1px solid black;
+  @include grid-column(12);
+
+  // for tablets and up // must be second
+  @include grid-media($neat-grid-tablet){
+    @include grid-column(3);
+
+  }
+  // for desktop and up // must be last
+  @include grid-media($neat-grid-desktop){
+    @include grid-column(6);
+
+  }
+
 }
