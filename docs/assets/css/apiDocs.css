@@ -3625,11 +3625,24 @@ body {
           .apiDocs .nav #navInner .version {
             float: none;
             display: block; } }
+        .apiDocs .nav #navInner .version span {
+          display: none; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .nav #navInner .version span {
+              display: inline-block; } }
         .apiDocs .nav #navInner .version select {
           background: transparent;
           border-radius: 30px;
           color: white;
-          border: 1px solid white; }
+          border: 1px solid white;
+          position: relative;
+          background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+          background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+          background-size: 5px 5px, 5px 5px, 1px 1.5em;
+          background-repeat: no-repeat;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none; }
           .apiDocs .nav #navInner .version select:focus,
           .apiDocs .nav #navInner .version select :active,
           .apiDocs .nav #navInner .version select :hover {
@@ -3705,6 +3718,11 @@ body {
       display: inline-block;
       background: #FFF;
       border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      .apiDocs .wrap .header.-main {
+        background: #9FA8DA;
+        /* fallback for old browsers */
+        background: linear-gradient(to right, #9FA8DA, #5C6BC0);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
       .apiDocs .wrap .header h1 {
         font-size: 3em; }
     .apiDocs .wrap .content {
