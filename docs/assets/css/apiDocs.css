@@ -3545,6 +3545,13 @@ body {
     left: 0;
     z-index: 999;
     min-height: 50px;
+    padding: 0 2.8rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     background: #01579b; }
     @media only screen and (min-width: 768px) {
@@ -3552,84 +3559,107 @@ body {
         width: calc(16.66667%);
         float: left;
         margin-left: 0;
-        position: relative; } }
+        position: relative;
+        padding: 0;
+        display: block; } }
     .apiDocs .nav #navInner {
-      height: 4.2rem; }
+      width: calc(100%);
+      float: left;
+      margin-left: 0; }
       .apiDocs .nav #navInner .brand {
         text-align: center;
-        display: -ms-flexbox;
-        display: flex;
         color: white;
-        float: left; }
+        display: inline-block; }
+        .apiDocs .nav #navInner .brand h1 {
+          margin: 0; }
         @media only screen and (min-width: 768px) {
           .apiDocs .nav #navInner .brand {
             padding: 4.2rem 1.4rem 1.4rem;
             display: block;
             float: none; } }
-      .apiDocs .nav #navInner .search {
-        display: block;
-        padding: 1.4rem; }
-        .apiDocs .nav #navInner .search .form-group {
-          width: 100%;
-          position: relative; }
-          .apiDocs .nav #navInner .search .form-group input {
-            font-size: 1.4rem;
-            border-radius: 4rem;
-            margin: 0 auto;
-            border: 1px solid rgba(0, 0, 0, 0.12);
-            height: 3rem;
-            width: 100%;
-            outline: none;
-            color: rgba(0, 0, 0, 0.54);
-            font-family: "Open Sans", sans-serif;
-            font-weight: 600; }
-            .apiDocs .nav #navInner .search .form-group input::-webkit-input-placeholder {
-              color: rgba(0, 0, 0, 0.54); }
-            .apiDocs .nav #navInner .search .form-group input::-moz-placeholder {
-              color: rgba(0, 0, 0, 0.54); }
-            .apiDocs .nav #navInner .search .form-group input:-ms-input-placeholder {
-              color: rgba(0, 0, 0, 0.54); }
-            .apiDocs .nav #navInner .search .form-group input::placeholder {
-              color: rgba(0, 0, 0, 0.54); }
-            .apiDocs .nav #navInner .search .form-group input:hover,
-            .apiDocs .nav #navInner .search .form-group input :focus {
-              border: 1px solid rgba(17, 15, 123, 0.8);
-              outline: none; }
-          .apiDocs .nav #navInner .search .form-group .addon {
-            position: absolute;
-            right: 0;
-            padding: 0 1.4rem;
-            line-height: 3rem;
-            color: rgba(0, 0, 0, 0.54); }
-      .apiDocs .nav #navInner .menu-toggle span {
-        width: 30px;
-        height: 1px;
-        margin-bottom: 3px;
-        background-color: white; }
-      .apiDocs .nav #navInner .version {
-        padding: 0.7rem 1.4rem;
-        text-align: center;
-        color: white;
+      .apiDocs .nav #navInner .menu-toggle {
         display: inline-block;
-        float: left; }
+        float: right; }
         @media only screen and (min-width: 768px) {
-          .apiDocs .nav #navInner .version {
-            float: none;
-            display: block; } }
-        .apiDocs .nav #navInner .version select {
-          background: transparent;
-          border-radius: 30px;
-          color: white;
-          border: 1px solid white; }
-          .apiDocs .nav #navInner .version select:focus,
-          .apiDocs .nav #navInner .version select :active,
-          .apiDocs .nav #navInner .version select :hover {
-            outline: none; }
+          .apiDocs .nav #navInner .menu-toggle {
+            display: none; } }
+        .apiDocs .nav #navInner .menu-toggle .btnToggle {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          height: 20px; }
+          .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle {
+            width: 30px;
+            height: 1px;
+            margin-bottom: 3px;
+            background-color: white;
+            display: block; }
+            .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle:last-of-type {
+              margin-bottom: 0; }
       .apiDocs .nav #navInner .docsNav {
         display: none; }
         @media only screen and (min-width: 768px) {
           .apiDocs .nav #navInner .docsNav {
             display: block; } }
+        .apiDocs .nav #navInner .docsNav .version {
+          padding: 0.7rem 1.4rem;
+          text-align: center;
+          color: white;
+          display: inline-block;
+          float: left; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .nav #navInner .docsNav .version {
+              float: none;
+              display: block; } }
+          .apiDocs .nav #navInner .docsNav .version select {
+            background: transparent;
+            border-radius: 30px;
+            color: white;
+            border: 1px solid white; }
+            .apiDocs .nav #navInner .docsNav .version select:focus,
+            .apiDocs .nav #navInner .docsNav .version select :active,
+            .apiDocs .nav #navInner .docsNav .version select :hover {
+              outline: none; }
+        .apiDocs .nav #navInner .docsNav .search {
+          display: block;
+          padding: 1.4rem; }
+          .apiDocs .nav #navInner .docsNav .search .form-group {
+            width: 100%;
+            position: relative; }
+            .apiDocs .nav #navInner .docsNav .search .form-group input {
+              font-size: 1.4rem;
+              border-radius: 4rem;
+              margin: 0 auto;
+              border: 1px solid rgba(0, 0, 0, 0.12);
+              height: 3rem;
+              width: 100%;
+              outline: none;
+              color: rgba(0, 0, 0, 0.54);
+              font-family: "Open Sans", sans-serif;
+              font-weight: 600; }
+              .apiDocs .nav #navInner .docsNav .search .form-group input::-webkit-input-placeholder {
+                color: rgba(0, 0, 0, 0.54); }
+              .apiDocs .nav #navInner .docsNav .search .form-group input::-moz-placeholder {
+                color: rgba(0, 0, 0, 0.54); }
+              .apiDocs .nav #navInner .docsNav .search .form-group input:-ms-input-placeholder {
+                color: rgba(0, 0, 0, 0.54); }
+              .apiDocs .nav #navInner .docsNav .search .form-group input::placeholder {
+                color: rgba(0, 0, 0, 0.54); }
+              .apiDocs .nav #navInner .docsNav .search .form-group input:hover,
+              .apiDocs .nav #navInner .docsNav .search .form-group input :focus {
+                border: 1px solid rgba(17, 15, 123, 0.8);
+                outline: none; }
+            .apiDocs .nav #navInner .docsNav .search .form-group .addon {
+              position: absolute;
+              right: 0;
+              padding: 0 1.4rem;
+              line-height: 3rem;
+              color: rgba(0, 0, 0, 0.54); }
         .apiDocs .nav #navInner .docsNav ul {
           margin-top: 0;
           list-style: none;

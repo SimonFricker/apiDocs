@@ -36,7 +36,7 @@ hljs.initHighlightingOnLoad();
 
 
 //smoothscroll
-$('a[href*="#"]')
+$('a[href*=#]')
     .not('[href="#"]')
     .not('[href="#0"]')
     .click(function(event) {
@@ -64,7 +64,6 @@ $('a[href*="#"]')
             }
         }
     });
-
 
 // Scroll spy - http://jsfiddle.net/mekwall/up4nu/
 var lastId,
