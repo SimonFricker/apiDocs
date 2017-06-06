@@ -27,43 +27,71 @@ body{
   .nav{
     @include grid-column(2, $custom-neat-grid);
       border-right: 1px solid $textDarkDivider;
-      background: #f5f5f5;
+      // background: #f5f5f5;
+      background: #1565c0;
 
     #navInner{
-      border-bottom: 20px solid black;
 
       .header{
         text-align: center;
         padding: $basePadding*3 $basePadding $basePadding;
-
+        color: $textLightPrimary;
       }
 
       .search{
         display: block;
         padding: $basePadding;
-        input{
-          font-size: 1.4rem;
-          border-radius: 4rem;
-          margin: 0 auto;
-          border: 1px solid $textDarkDivider;
-          height: 4.6rem;
-          width: 100%;
-          outline: none;
 
-          &:hover, :focus{
-            border: 1px solid $themeColor;
+
+        .form-group{
+          width: 100%;
+          position: relative;
+
+          input{
+            font-size: 1.4rem;
+            border-radius: 4rem;
+            margin: 0 auto;
+            border: 1px solid $textDarkDivider;
+            height: 3rem;
+            width: 100%;
             outline: none;
+            color: $textDarkSecondary;
+            font-family: $fontBody;
+            font-weight: 600;
+
+            &::placeholder{
+              color: $textDarkSecondary;
+            }
+
+            &:hover, :focus{
+              border: 1px solid $themeColor;
+              outline: none;
+            }
+          }
+          .addon{
+            position: absolute;
+            right: 0;
+            padding: 0  1.4rem;
+            line-height: 3rem;
+            color: $textDarkSecondary;
           }
         }
+
       }
 
       .version{
         padding: $basePadding/2 $basePadding;
         text-align: center;
+        color: $textLightPrimary;
         select{
-          background: green;
-          color: white;
+          background: transparent;
+          border-radius: 30px;
+          color: $textLightPrimary;
+          border: 1px solid $textLightPrimary;
 
+          &:focus, :hover, :active{
+            outline: none;
+          }
         }
       }
 
@@ -79,11 +107,14 @@ body{
 
           a{
             text-decoration: none;
-            color: $textDarkSecondary;
+            color: $textLightSecondary;
           }
 
           &.active{
-            background: #dedede;
+            background: #5e92f3;
+            a{
+              color: $textLightPrimary;
+            }
           }
 
         }
@@ -99,9 +130,10 @@ body{
  // @include grid-container;
 
     .header{
-
-      padding: $basePadding*12 $basePadding*2 $basePadding*2;
+          padding: $basePadding*12 $basePadding*2 $basePadding*4;
           display: inline-block;
+          background: #FFF;
+          border-bottom: 1px solid $textDarkDivider;
 
       h1{
         font-size: 3em;
@@ -124,7 +156,7 @@ body{
       top:0;
       right:0;
       position: absolute;
-      background: darken(#FCFCFC,12);
+      background: darken(#F3F3F4,6);
 
       ul{
         margin: 0;
@@ -165,7 +197,7 @@ body{
         //  flex: 1;
          font-size: 1.8rem;
          padding: $basePadding*2;
-         background: #FCFCFC;
+         background: #FFF;
         //  border-right: 1px solid $textDarkDivider;
 
 
@@ -179,7 +211,8 @@ body{
 
        .method-example{
          @include grid-column(6,$custom-neat-grid);
-         background: darken(#FCFCFC,6);
+        //  background: darken(#FCFCFC,6);
+        background: #F3F3F4;
         //  flex: 1;
          font-size: 1.6rem;
          padding: $basePadding*2;
@@ -192,7 +225,8 @@ body{
          }
 
          .hljs {
-           background: darken(#FCFCFC,6);
+          //  background: darken(#FCFCFC,6);
+          background: #F3F3F4;
         }
 
        }

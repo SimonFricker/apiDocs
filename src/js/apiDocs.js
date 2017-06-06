@@ -1,28 +1,18 @@
 console.log('apiDocs started');
-// navbar
 
-
-
+// Sticky navbar and set lang
 $(window).on("load resize scroll",function(e){
-
 $("#navInner").stick_in_parent();
 $(".setLang").stick_in_parent();
-var widthss = $(".method-example").outerWidth();
-
-$(".setLang").width(widthss);
-
-
-
 });
 
-    hljs.initHighlightingOnLoad();
+// Make the code beautiful
+hljs.initHighlightingOnLoad();
 
 
 
 //smoothscroll
-// Select all links with hashes
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
@@ -32,18 +22,13 @@ $('a[href*="#"]')
       &&
       location.hostname == this.hostname
     ) {
-      // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
       if (target.length) {
-        // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
           var $target = $(target);
           $target.focus();
           if ($target.is(":focus")) { // Checking if the target was focused
@@ -57,10 +42,8 @@ $('a[href*="#"]')
     }
   });
 
-  console.log('smoothscroll done');
 
 // Scroll spy - http://jsfiddle.net/mekwall/up4nu/
-  // Cache selectors
 var lastId,
     topMenu = $(".docsNav"),
     topMenuHeight = topMenu.outerHeight()+15,
@@ -108,6 +91,8 @@ $(window).scroll(function(){
 });
 
 
+
+
 ///load json
 //
 // $.ajax({
@@ -124,30 +109,30 @@ $(window).scroll(function(){
 //
 
 
-//// tabs
-
-$(document).ready(function(){
-
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-
-
-
-    // console.log("[data-tab='" + tab_id + "']");
-
-    $('.tabs li').each(function() {
-      $(this).find("[data-tab='" + tab_id + "']").removeClass('current');
-      $(this).find("[data-tab='" + tab_id + "']").addClass('current');
-    });
-
-    $('.tab-content').removeClass('current');
+// tabs
+//
+// $(document).ready(function(){
+// 	$('ul.tabs li').click(function(){
+// 		var tab_id = $(this).attr('data-tab');
+//     // console.log("[data-tab='" + tab_id + "']");
+//     $('.tabs li').each(function() {
+//       $(this).find("[data-tab='" + tab_id + "']").removeClass('current');
+//       $(this).find("[data-tab='" + tab_id + "']").addClass('current');
+//     });
+//
+//     $('.tab-content').removeClass('current');
+// 	})
+// })
 
 
 
-	})
 
-})
 
+// Language position
+$(window).on("load resize scroll",function(e){
+var widthss = $(".method-example").outerWidth();
+$(".setLang").width(widthss);
+});
 
 // Language tabs
 
