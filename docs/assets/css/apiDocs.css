@@ -3437,12 +3437,6 @@ hue-6-2: #c18401
 .ion-xbox:before {
   content: ""; }
 
-html {
-  font-size: 62.5%; }
-
-body {
-  font-size: 1.8rem; }
-
 /* Small screen, non-retina */
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets and up */
@@ -3468,6 +3462,15 @@ body {
       width: calc(50% - 42px);
       float: left;
       margin-left: 28px; } }
+
+html {
+  font-size: 40%; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  font-size: 1.8rem; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
@@ -3523,7 +3526,9 @@ body {
 
 .apiDocs {
   font-family: "Open Sans", sans-serif; }
-  .apiDocs *, .apiDocs *:before, .apiDocs *:after {
+  .apiDocs *,
+  .apiDocs *:after,
+  .apiDocs *:before {
     box-sizing: border-box; }
   @media only screen and (min-width: 768px) {
     .apiDocs .container {
@@ -3539,6 +3544,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
+    min-height: 50px;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     background: #01579b; }
     @media only screen and (min-width: 768px) {
@@ -3547,75 +3553,98 @@ body {
         float: left;
         margin-left: 0;
         position: relative; } }
-    .apiDocs .nav #navInner .header {
-      text-align: center;
-      display: -ms-flexbox;
-      display: flex;
-      color: white; }
-      @media only screen and (min-width: 768px) {
-        .apiDocs .nav #navInner .header {
-          padding: 4.2rem 1.4rem 1.4rem;
-          display: block; } }
-    .apiDocs .nav #navInner .search {
-      display: block;
-      padding: 1.4rem; }
-      .apiDocs .nav #navInner .search .form-group {
-        width: 100%;
-        position: relative; }
-        .apiDocs .nav #navInner .search .form-group input {
-          font-size: 1.4rem;
-          border-radius: 4rem;
-          margin: 0 auto;
-          border: 1px solid rgba(0, 0, 0, 0.12);
-          height: 3rem;
-          width: 100%;
-          outline: none;
-          color: rgba(0, 0, 0, 0.54);
-          font-family: "Open Sans", sans-serif;
-          font-weight: 600; }
-          .apiDocs .nav #navInner .search .form-group input::-webkit-input-placeholder {
-            color: rgba(0, 0, 0, 0.54); }
-          .apiDocs .nav #navInner .search .form-group input::-moz-placeholder {
-            color: rgba(0, 0, 0, 0.54); }
-          .apiDocs .nav #navInner .search .form-group input:-ms-input-placeholder {
-            color: rgba(0, 0, 0, 0.54); }
-          .apiDocs .nav #navInner .search .form-group input::placeholder {
-            color: rgba(0, 0, 0, 0.54); }
-          .apiDocs .nav #navInner .search .form-group input:hover, .apiDocs .nav #navInner .search .form-group input :focus {
-            border: 1px solid rgba(17, 15, 123, 0.8);
-            outline: none; }
-        .apiDocs .nav #navInner .search .form-group .addon {
-          position: absolute;
-          right: 0;
-          padding: 0  1.4rem;
-          line-height: 3rem;
-          color: rgba(0, 0, 0, 0.54); }
-    .apiDocs .nav #navInner .version {
-      padding: 0.7rem 1.4rem;
-      text-align: center;
-      color: white; }
-      .apiDocs .nav #navInner .version select {
-        background: transparent;
-        border-radius: 30px;
+    .apiDocs .nav #navInner {
+      height: 4.2rem; }
+      .apiDocs .nav #navInner .brand {
+        text-align: center;
+        display: -ms-flexbox;
+        display: flex;
         color: white;
-        border: 1px solid white; }
-        .apiDocs .nav #navInner .version select:focus, .apiDocs .nav #navInner .version select :hover, .apiDocs .nav #navInner .version select :active {
-          outline: none; }
-    .apiDocs .nav #navInner ul {
-      margin-top: 0;
-      list-style: none;
-      padding: 0; }
-      .apiDocs .nav #navInner ul li {
-        padding: 0.7rem 1.4rem; }
-        .apiDocs .nav #navInner ul li a {
-          text-decoration: none;
-          color: rgba(255, 255, 255, 0.7); }
-        .apiDocs .nav #navInner ul li.active {
-          background: #4f83cc; }
-          .apiDocs .nav #navInner ul li.active a {
-            color: white; }
+        float: left; }
+        @media only screen and (min-width: 768px) {
+          .apiDocs .nav #navInner .brand {
+            padding: 4.2rem 1.4rem 1.4rem;
+            display: block;
+            float: none; } }
+      .apiDocs .nav #navInner .search {
+        display: block;
+        padding: 1.4rem; }
+        .apiDocs .nav #navInner .search .form-group {
+          width: 100%;
+          position: relative; }
+          .apiDocs .nav #navInner .search .form-group input {
+            font-size: 1.4rem;
+            border-radius: 4rem;
+            margin: 0 auto;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            height: 3rem;
+            width: 100%;
+            outline: none;
+            color: rgba(0, 0, 0, 0.54);
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600; }
+            .apiDocs .nav #navInner .search .form-group input::-webkit-input-placeholder {
+              color: rgba(0, 0, 0, 0.54); }
+            .apiDocs .nav #navInner .search .form-group input::-moz-placeholder {
+              color: rgba(0, 0, 0, 0.54); }
+            .apiDocs .nav #navInner .search .form-group input:-ms-input-placeholder {
+              color: rgba(0, 0, 0, 0.54); }
+            .apiDocs .nav #navInner .search .form-group input::placeholder {
+              color: rgba(0, 0, 0, 0.54); }
+            .apiDocs .nav #navInner .search .form-group input:hover,
+            .apiDocs .nav #navInner .search .form-group input :focus {
+              border: 1px solid rgba(17, 15, 123, 0.8);
+              outline: none; }
+          .apiDocs .nav #navInner .search .form-group .addon {
+            position: absolute;
+            right: 0;
+            padding: 0 1.4rem;
+            line-height: 3rem;
+            color: rgba(0, 0, 0, 0.54); }
+      .apiDocs .nav #navInner .menu-toggle span {
+        width: 30px;
+        height: 1px;
+        margin-bottom: 3px;
+        background-color: white; }
+      .apiDocs .nav #navInner .version {
+        padding: 0.7rem 1.4rem;
+        text-align: center;
+        color: white;
+        display: inline-block;
+        float: left; }
+        @media only screen and (min-width: 768px) {
+          .apiDocs .nav #navInner .version {
+            float: none;
+            display: block; } }
+        .apiDocs .nav #navInner .version select {
+          background: transparent;
+          border-radius: 30px;
+          color: white;
+          border: 1px solid white; }
+          .apiDocs .nav #navInner .version select:focus,
+          .apiDocs .nav #navInner .version select :active,
+          .apiDocs .nav #navInner .version select :hover {
+            outline: none; }
+      .apiDocs .nav #navInner .docsNav {
+        display: none; }
+        @media only screen and (min-width: 768px) {
+          .apiDocs .nav #navInner .docsNav {
+            display: block; } }
+        .apiDocs .nav #navInner .docsNav ul {
+          margin-top: 0;
+          list-style: none;
+          padding: 0; }
+          .apiDocs .nav #navInner .docsNav ul li {
+            padding: 0.7rem 1.4rem; }
+            .apiDocs .nav #navInner .docsNav ul li a {
+              text-decoration: none;
+              color: rgba(255, 255, 255, 0.7); }
+            .apiDocs .nav #navInner .docsNav ul li.active {
+              background: #4f83cc; }
+              .apiDocs .nav #navInner .docsNav ul li.active a {
+                color: white; }
   .apiDocs .wrap {
-    margin-top: 10rem; }
+    margin-top: 50px; }
     @media only screen and (min-width: 768px) {
       .apiDocs .wrap {
         width: calc(83.33333%);
@@ -3660,9 +3689,9 @@ body {
           .apiDocs .wrap .content .setLang ul li {
             display: block;
             float: left;
-            margin: .4rem 1rem;
+            margin: 0.4rem 1rem;
             cursor: pointer;
-            padding: .4rem 1rem;
+            padding: 0.4rem 1rem;
             font-size: 1.6rem;
             border: 1px solid transparent; }
             .apiDocs .wrap .content .setLang ul li.current {
@@ -3670,7 +3699,6 @@ body {
               border: 1px solid lightgray;
               border-radius: 1rem; }
       .apiDocs .wrap .content .method {
-        min-height: 1000px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
         @media only screen and (min-width: 768px) {
           .apiDocs .wrap .content .method {
@@ -3690,8 +3718,8 @@ body {
               margin-left: 0; } }
           .apiDocs .wrap .content .method .method-description code {
             background: #ededed;
-            border-radius: .4rem;
-            padding: .4rem .8rem; }
+            border-radius: 0.4rem;
+            padding: 0.4rem 0.8rem; }
         .apiDocs .wrap .content .method .method-example {
           width: calc(100%);
           float: left;
