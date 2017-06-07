@@ -1,25 +1,106 @@
-.btn-submit {
-  height: $baseHeight;
-  border-radius: $baseBorderRadius;
-  color: rgba(255,255,255,1);
-  background: $themeColor;
-  font-size: $baseFontSize;
-  padding: 0 $basePadding*2;
-  cursor: pointer;
+.btn{
+  $baseBorderRadius: .4rem;
+  $basePadding: 2.4rem;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-family: $fontHeadings;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
   user-select: none;
-  border: none;
+  border: 1px solid transparent;
+  padding: $basePadding/2 $basePadding;
+  font-size: 1.8rem;
+  transition: all .2s ease-in-out;
+  border-radius: $baseBorderRadius;
+  text-decoration: none;
 
-  &:hover {
-    outline: none;
-    background: darken($themeColor, 6);
+  &:focus, :hover{
+    text-decoration: none;
   }
 
-  &.-block {
-    display: block;
+  &.-lg{
+    padding: $basePadding/2 $basePadding*1.5;
+  }
+
+  &.-fw{
     width: 100%;
   }
 
-  &.-right{
-    float: right;
+  &.-shadow{
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &.-rounded{
+    border-radius: 40px;
+  }
+
+  //primary button modifier
+  &.-primary{
+    $btnPrimaryColor: $themeColorPrimary;
+    background: $btnPrimaryColor;
+    color: white;
+    border: 1px solid darken($btnPrimaryColor,10);
+
+    &:hover{
+      background: darken($btnPrimaryColor, 10);
+    }
+    &.-outline{
+      background: transparent;
+      border: 2px solid $btnPrimaryColor;
+      color: $btnPrimaryColor;
+      &:hover{
+        background: lighten($btnPrimaryColor, 40);
+        color: darken($btnPrimaryColor, 10)
+      }
+    }
+  }
+
+  //primary button modifier
+  &.-secondary{
+    $btnSecondaryColor: $themeColorSecondary;
+    background: $btnSecondaryColor;
+    color: white;
+    border: 1px solid darken($btnSecondaryColor,10);
+
+    &:hover{
+      background: darken($btnSecondaryColor, 10);
+    }
+    &.-outline{
+      background: transparent;
+      border: 2px solid $btnSecondaryColor;
+      color: $btnSecondaryColor;
+      &:hover{
+        background: lighten($btnSecondaryColor, 40);
+        color: darken($btnSecondaryColor, 10)
+      }
+    }
+  }
+  //light button modifier
+  &.-light{
+    $btnLightColor: rgba(255,255,255,1);
+    background: $btnLightColor;
+
+    color: black;
+
+    &.-outline{
+      background: transparent;
+      border: 1px solid $btnLightColor;
+      color: $btnLightColor;
+      &:hover{
+        //background: transparentize($btnLightColor, 20);
+
+      }
+    }
+  }
+
+}
+
+.btnContainer{
+  display: block;
+  &.-center{
+    text-align: center;
   }
 }

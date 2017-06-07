@@ -3470,7 +3470,8 @@ html {
       font-size: 62.5%; } }
 
 body {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  line-height: 1.2; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
@@ -3492,34 +3493,80 @@ h4 {
 
 h5 {
   font-size: 1.8rem;
-  line-height: 2; }
+  line-height: 2.2rem; }
 
 p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
   line-height: 1.5; }
 
-.btn-submit {
-  height: 4.8rem;
-  border-radius: 6px;
-  color: white;
-  background: rgba(17, 15, 123, 0.8);
-  font-size: 1.6rem;
-  padding: 0 2.8rem;
-  cursor: pointer;
+.btn {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: none; }
-  .btn-submit:hover {
-    outline: none;
-    background: rgba(13, 12, 96, 0.8); }
-  .btn-submit.-block {
-    display: block;
+  border: 1px solid transparent;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  transition: all .2s ease-in-out;
+  border-radius: 0.4rem;
+  text-decoration: none; }
+  .btn:focus, .btn :hover {
+    text-decoration: none; }
+  .btn.-lg {
+    padding: 1.2rem 3.6rem; }
+  .btn.-fw {
     width: 100%; }
-  .btn-submit.-right {
-    float: right; }
+  .btn.-shadow {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12); }
+  .btn.-rounded {
+    border-radius: 40px; }
+  .btn.-primary {
+    background: #225F9B;
+    color: white;
+    border: 1px solid #194571; }
+    .btn.-primary:hover {
+      background: #194571; }
+    .btn.-primary.-outline {
+      background: transparent;
+      border: 2px solid #225F9B;
+      color: #225F9B; }
+      .btn.-primary.-outline:hover {
+        background: #9fc5ea;
+        color: #194571; }
+  .btn.-secondary {
+    background: #FF9D5B;
+    color: white;
+    border: 1px solid #ff7f28; }
+    .btn.-secondary:hover {
+      background: #ff7f28; }
+    .btn.-secondary.-outline {
+      background: transparent;
+      border: 2px solid #FF9D5B;
+      color: #FF9D5B; }
+      .btn.-secondary.-outline:hover {
+        background: white;
+        color: #ff7f28; }
+  .btn.-light {
+    background: white;
+    color: black; }
+    .btn.-light.-outline {
+      background: transparent;
+      border: 1px solid white;
+      color: white; }
+
+.btnContainer {
+  display: block; }
+  .btnContainer.-center {
+    text-align: center; }
 
 body {
   position: relative; }
@@ -3723,6 +3770,8 @@ body {
         /* fallback for old browsers */
         background: linear-gradient(to right, #9FA8DA, #5C6BC0);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+        .apiDocs .wrap .header.-main h1, .apiDocs .wrap .header.-main h3, .apiDocs .wrap .header.-main p {
+          color: white; }
       .apiDocs .wrap .header h1 {
         font-size: 3em; }
     .apiDocs .wrap .content {

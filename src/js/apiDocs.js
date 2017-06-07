@@ -5,19 +5,21 @@ console.log('apiDocs started');
 $(window).on("load resize scroll", function(e) {
 
 
-if($(window).width() > 768)
-    {
-      $("#navInner").stick_in_parent();
-      $(".setLang").stick_in_parent();
-    } else {
-      console.log('with < 768')
+
+
+    function checkPosition() {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+          $("#navInner").stick_in_parent();
+          $(".setLang").stick_in_parent();
+        } else {
+            //...
+        }
     }
 
 });
 
 // Make the code beautiful
 hljs.initHighlightingOnLoad();
-
 
 
 
@@ -129,6 +131,7 @@ $(window).on("load resize scroll", function(e) {
         var widthss = $(".method-example").outerWidth();
         $(".setLang").width(widthss);
       } else {
+
       }
 
   });

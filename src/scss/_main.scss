@@ -286,9 +286,10 @@ appearance: none;
       &.-main{
         background: #9FA8DA;  /* fallback for old browsers */
         background: linear-gradient(to right, #9FA8DA, #5C6BC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+        h1,h3,p{
+          color: $textLightPrimary;
+        }
       }
-
 
       h1 {
         font-size: 3em;
