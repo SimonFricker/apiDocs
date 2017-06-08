@@ -448,15 +448,13 @@ $(window).on("load resize scroll", function(e) {
 
 
 
-
-    function checkPosition() {
         if (window.matchMedia('(min-width: 768px)').matches) {
           $("#navInner").stick_in_parent();
           $(".setLang").stick_in_parent();
         } else {
             //...
         }
-    }
+
 
 });
 
