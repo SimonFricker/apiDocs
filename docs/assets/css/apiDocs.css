@@ -3672,28 +3672,45 @@ body {
           .apiDocs .nav #navInner .version {
             float: none;
             display: block; } }
+        .apiDocs .nav #navInner .version .form-group .dropdown {
+          position: relative;
+          display: inline-block; }
+          .apiDocs .nav #navInner .version .form-group .dropdown::after, .apiDocs .nav #navInner .version .form-group .dropdown::before {
+            content: "";
+            position: absolute;
+            pointer-events: none; }
+          .apiDocs .nav #navInner .version .form-group .dropdown:after {
+            content: "\f123";
+            position: absolute;
+            top: 35%;
+            font-size: 1.4rem;
+            right: 1rem;
+            font-family: "Ionicons";
+            color: black; }
+          .apiDocs .nav #navInner .version .form-group .dropdown select {
+            width: 100%;
+            background-color: white;
+            color: black;
+            font-size: 1.6rem;
+            padding: 1rem 3.2rem 1rem 1.4rem;
+            text-align: right;
+            border: 0;
+            margin: 0;
+            border-radius: 5px;
+            font-family: helvetica;
+            text-overflow: '';
+            -webkit-appearance: button;
+            /* hide default arrow in chrome OSX */ }
+            .apiDocs .nav #navInner .version .form-group .dropdown select:focus {
+              outline: none; }
+            .apiDocs .nav #navInner .version .form-group .dropdown select option:first-child {
+              text-transform: uppercase; }
         .apiDocs .nav #navInner .version span {
           display: none; }
           @media only screen and (min-width: 768px) {
             .apiDocs .nav #navInner .version span {
-              display: inline-block; } }
-        .apiDocs .nav #navInner .version select {
-          background: transparent;
-          border-radius: 30px;
-          color: white;
-          border: 1px solid white;
-          position: relative;
-          background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
-          background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-          background-size: 5px 5px, 5px 5px, 1px 1.5em;
-          background-repeat: no-repeat;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none; }
-          .apiDocs .nav #navInner .version select:focus,
-          .apiDocs .nav #navInner .version select :active,
-          .apiDocs .nav #navInner .version select :hover {
-            outline: none; }
+              display: inline-block;
+              margin-right: .4rem; } }
       .apiDocs .nav #navInner .docsNav {
         display: none; }
         .apiDocs .nav #navInner .docsNav.active {
@@ -3770,7 +3787,9 @@ body {
         /* fallback for old browsers */
         background: linear-gradient(to right, #9FA8DA, #5C6BC0);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-        .apiDocs .wrap .header.-main h1, .apiDocs .wrap .header.-main h3, .apiDocs .wrap .header.-main p {
+        .apiDocs .wrap .header.-main h1,
+        .apiDocs .wrap .header.-main h3,
+        .apiDocs .wrap .header.-main p {
           color: white; }
       .apiDocs .wrap .header h1 {
         font-size: 3em; }

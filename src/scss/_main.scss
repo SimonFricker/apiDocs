@@ -1,395 +1,393 @@
 body {
-  position: relative;
+    position: relative;
 }
 
 .apiDocs {
-  $basePadding: 1.4rem;
-  font-family: $fontBody;
+    $basePadding: 1.4rem;
+    font-family: $fontBody;
 
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
-
-  .container {
-    @include grid-media($neat-grid-tablet) {
-      display: flex;
-    }
-  }
-
-  .relative {
-    position: relative;
-  }
-
-  .nav {
-    @include grid-column(12, $custom-neat-grid);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-
-    padding: 0 $basePadding*2;
-
-    // display: flex;
-    // align-items: center;
-
-
-    display: flex;
-  justify-content: space-between;
-
-    border-right: 1px solid $textDarkDivider;
-    background: #01579b;
-
-    // for tablets and up // must be second
-    @include grid-media($neat-grid-tablet) {
-      @include grid-column(2, $custom-neat-grid);
-      position: relative;
-      padding: 0;
-      display: block;
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
     }
 
+    .container {
+        @include grid-media($neat-grid-tablet) {
+            display: flex;
+        }
+    }
 
-    #navInner {
-      //
-      // display: flex;
-      // justify-content: space-between;
+    .relative {
+        position: relative;
+    }
 
-      @include grid-column(12, $custom-neat-grid);
-      .brand {
-          min-height: 50px;
-        text-align: center;
-            float: left;
+    .nav {
+        @include grid-column(12, $custom-neat-grid);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        padding: 0 $basePadding*2;
         // display: flex;
-        // flex-direction: row;
         // align-items: center;
-        // justify-content: center;
-        color: $textLightPrimary;
-        // float: left;
-        // align-self: flex-start;
-        // display: inline-block;
-
         display: flex;
-
-        flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-
-        h1{
-          margin: 0;
-        }
-
+        justify-content: space-between;
+        border-right: 1px solid $textDarkDivider;
+        background: #01579b;
+        // for tablets and up // must be second
         @include grid-media($neat-grid-tablet) {
-          padding: $basePadding*3 $basePadding $basePadding;
-          display: block;
-          float: none;
-        }
-      }
-
-
-
-      .menu-toggle {
-          min-height: 50px;
-        // display: table;
-        // margin-left: auto;
-        display: inline-block;
-        float: right;
-
-        display: flex;
-
-        flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-
-        @include grid-media($neat-grid-tablet) {
-          display: none;
-
-        }
-
-        .btnToggle{
-
-          // height: 20px;
-
-
-          .toggle {
-            width: 30px;
-            height: 1px;
-            margin-bottom: 3px;
-            background-color: white;
+             @include grid-column(2, $custom-neat-grid);
+            position: relative;
+            padding: 0;
             display: block;
+        }
 
-            &:last-of-type{
-              margin-bottom:0;
+        #navInner {
+            //
+            // display: flex;
+            // justify-content: space-between;
+            @include grid-column(12, $custom-neat-grid);
+
+            .brand {
+                min-height: 50px;
+                text-align: center;
+                float: left;
+                // display: flex;
+                // flex-direction: row;
+                // align-items: center;
+                // justify-content: center;
+                color: $textLightPrimary;
+                // float: left;
+                // align-self: flex-start;
+                // display: inline-block;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h1 {
+                    margin: 0;
+                }
+                @include grid-media($neat-grid-tablet) {
+                    padding: $basePadding*3 $basePadding $basePadding;
+                    display: block;
+                    float: none;
+                }
             }
-          }
+
+            .menu-toggle {
+                min-height: 50px;
+                // display: table;
+                // margin-left: auto;
+                display: inline-block;
+                float: right;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                @include grid-media($neat-grid-tablet) {
+                    display: none;
+                }
+
+                .btnToggle {
+                    // height: 20px;
+                    .toggle {
+                        width: 30px;
+                        height: 1px;
+                        margin-bottom: 3px;
+                        background-color: white;
+                        display: block;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .version {
+                padding: $basePadding/2 $basePadding;
+                text-align: center;
+                color: $textLightPrimary;
+                display: inline-block;
+                float: left;
+                min-height: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                @include grid-media($neat-grid-tablet) {
+                    float: none;
+                    display: block;
+                }
+
+                .form-group {
+                    .dropdown {
+                        // width: 100%;
+                        position: relative;
+                        display: inline-block;
+
+                        &::after,
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            pointer-events: none;
+                        }
+
+                        &:after {
+                          content: "\f123";
+                          position: absolute;
+                          top: 35%;
+                          font-size: 1.4rem;
+                          right: 1rem;
+                          font-family: "Ionicons";
+                          color: black;
+                        }
+
+                        select {
+                            width: 100%;
+                            background-color: white;
+                            color: black;
+                            font-size: 1.6rem;
+                            padding: 1rem 3.2rem 1rem 1.4rem;
+                            text-align: right;
+
+                            border: 0;
+                            margin: 0;
+                            border-radius: 5px;
+                            //text-indent: 0.01px;
+                            font-family: helvetica;
+                            text-overflow: '';
+                            -webkit-appearance: button;
+                            /* hide default arrow in chrome OSX */
+                            &:focus {
+                                outline: none;
+                            }
+
+                            option {
+                                &:first-child {
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    display: none;
+                    @include grid-media($neat-grid-tablet) {
+                        display: inline-block;
+                        margin-right: .4rem;
+                    }
+                }
+            }
+
+            .docsNav {
+                display: none;
+
+                &.active {
+                    display: block;
+                    clear: both;
+                    margin: 0 auto;
+                    overflow: visible;
+                }
+                @include grid-media($neat-grid-tablet) {
+                    display: block;
+                }
+
+                .search {
+                    display: block;
+                    padding: $basePadding;
+
+                    .form-group {
+                        width: 100%;
+                        position: relative;
+
+                        input {
+                            font-size: 1.4rem;
+                            border-radius: 4rem;
+                            margin: 0 auto;
+                            border: 1px solid $textDarkDivider;
+                            height: 3rem;
+                            width: 100%;
+                            outline: none;
+                            color: $textDarkSecondary;
+                            font-family: $fontBody;
+                            font-weight: 600;
+
+                            &::placeholder {
+                                color: $textDarkSecondary;
+                            }
+
+                            &:hover,
+                            :focus {
+                                border: 1px solid $themeColor;
+                                outline: none;
+                            }
+                        }
+
+                        .addon {
+                            position: absolute;
+                            right: 0;
+                            padding: 0 1.4rem;
+                            line-height: 3rem;
+                            color: $textDarkSecondary;
+                        }
+                    }
+                }
+
+                ul {
+                    margin-top: 0;
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        padding: $basePadding/2 $basePadding;
+
+                        a {
+                            text-decoration: none;
+                            color: $textLightSecondary;
+                        }
+
+                        &.active {
+                            background: #4f83cc;
+
+                            a {
+                                color: $textLightPrimary;
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
+    }
 
-
-      .version {
-        padding: $basePadding/2 $basePadding;
-        text-align: center;
-        color: $textLightPrimary;
-        display: inline-block;
-        float: left;
-
-          min-height: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
+    .wrap {
+        margin-top: 50px;
+        // for tablets and up // must be second
         @include grid-media($neat-grid-tablet) {
-          float: none;
-          display: block;
+             @include grid-column(10, $custom-neat-grid);
+            margin-top: 0;
         }
 
-        span{
-          display: none;
-          @include grid-media($neat-grid-tablet) {
+        .header {
+            padding: $basePadding*12 $basePadding*2 $basePadding*4;
             display: inline-block;
-          }
+            background: #FFF;
+            border-bottom: 1px solid $textDarkDivider;
 
+            &.-main {
+                background: #9FA8DA;
+                /* fallback for old browsers */
+                background: linear-gradient(to right, #9FA8DA, #5C6BC0);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                h1,
+                h3,
+                p {
+                    color: $textLightPrimary;
+                }
+            }
+
+            h1 {
+                font-size: 3em;
+            }
         }
 
-        select {
-          background: transparent;
-          border-radius: 30px;
-          color: $textLightPrimary;
-          border: 1px solid $textLightPrimary;
-          position: relative;
-
-          background-image:
-   linear-gradient(45deg, transparent 50%, gray 50%),
-   linear-gradient(135deg, gray 50%, transparent 50%);
- background-position:
-   calc(100% - 20px) calc(1em + 2px),
-   calc(100% - 15px) calc(1em + 2px),
-   calc(100% - 2.5em) 0.5em;
- background-size:
-   5px 5px,
-   5px 5px,
-   1px 1.5em;
- background-repeat: no-repeat;
-appearance: none;
-
-
-
-          &:focus,
-          :active,
-          :hover {
-            outline: none;
-          }
-        }
-      }
-
-      .docsNav {
-        display: none;
-
-        &.active{
-          display: block;
-          clear: both;
-    margin: 0 auto;
-    overflow: visible;
-        }
-        @include grid-media($neat-grid-tablet) {
-          display: block;
-        }
-
-
-
-        .search {
-          display: block;
-          padding: $basePadding;
-
-          .form-group {
-            width: 100%;
+        .content {
+            @include grid-media($neat-grid-tablet) {
+                 @include grid-column(12, $custom-neat-grid);
+            }
+            flex: 1;
             position: relative;
 
-            input {
-              font-size: 1.4rem;
-              border-radius: 4rem;
-              margin: 0 auto;
-              border: 1px solid $textDarkDivider;
-              height: 3rem;
-              width: 100%;
-              outline: none;
-              color: $textDarkSecondary;
-              font-family: $fontBody;
-              font-weight: 600;
+            .setLang {
+                display: none;
+                @include grid-media($neat-grid-tablet) {
+                     @include grid-column(6,$custom-neat-grid);
+                    display: flex;
+                    display: block;
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                }
+                // @include grid-push(2);
+                // flex: 1;
+                background: darken(#F3F3F4,6);
 
-              &::placeholder {
-                color: $textDarkSecondary;
-              }
+                ul {
+                    margin: 0;
+                    list-style: none;
+                    padding: 0;
+                    display: inline-block;
 
-              &:hover,
-              :focus {
-                border: 1px solid $themeColor;
-                outline: none;
-              }
+                    li {
+                        display: block;
+                        float: left;
+                        margin: 0.4rem 1rem;
+                        cursor: pointer;
+                        padding: 0.4rem 1rem;
+                        font-size: 1.6rem;
+                        border: 1px solid rgba(0,0,0,0);
+
+                        &.current {
+                            background: darken(#FCFCFC,24);
+                            border: 1px solid darken(#FCFCFC,16);
+                            border-radius: 1rem;
+                        }
+                    }
+                }
             }
 
-            .addon {
-              position: absolute;
-              right: 0;
-              padding: 0 1.4rem;
-              line-height: 3rem;
-              color: $textDarkSecondary;
+            .method {
+                border-bottom: 1px solid $textDarkDivider;
+                @include grid-media($neat-grid-tablet) {
+                    display: flex;
+                }
+
+                .method-description {
+                    @include grid-column(12,$custom-neat-grid);
+                    @include grid-media($neat-grid-tablet) {
+                         @include grid-column(6,$custom-neat-grid);
+                    }
+                    //  flex: 1;
+                    font-size: 1.8rem;
+                    padding: $basePadding*2;
+                    background: #FFF;
+                    //  border-right: 1px solid $textDarkDivider;
+                    code {
+                        background: darken(#FCFCFC,6);
+                        border-radius: 0.4rem;
+                        padding: 0.4rem 0.8rem;
+                    }
+                }
+
+                .method-example {
+                    @include grid-column(12,$custom-neat-grid);
+                    display: block;
+                    @include grid-media($neat-grid-tablet) {
+                         @include grid-column(6,$custom-neat-grid);
+                    }
+                    //  background: darken(#FCFCFC,6);
+                    background: #F3F3F4;
+                    //  flex: 1;
+                    font-size: 1.6rem;
+                    padding: $basePadding*2;
+
+                    .tab-content {
+                        display: none;
+
+                        &.current {
+                            display: block;
+                        }
+                    }
+
+                    .hljs {
+                        //  background: darken(#FCFCFC,6);
+                        background: #F3F3F4;
+                    }
+                }
             }
-          }
         }
-
-        ul {
-          margin-top: 0;
-          list-style: none;
-          padding: 0;
-
-          li {
-            padding: $basePadding/2 $basePadding;
-
-            a {
-              text-decoration: none;
-              color: $textLightSecondary;
-            }
-
-            &.active {
-              background: #4f83cc;
-
-              a {
-                color: $textLightPrimary;
-              }
-            }
-          }
-        }
-      }
     }
-  }
-
-  .wrap {
-    margin-top: 50px;
-    // for tablets and up // must be second
-    @include grid-media($neat-grid-tablet) {
-      @include grid-column(10, $custom-neat-grid);
-      margin-top: 0;
-    }
-
-    .header {
-      padding: $basePadding*12 $basePadding*2 $basePadding*4;
-      display: inline-block;
-      background: #FFF;
-      border-bottom: 1px solid $textDarkDivider;
-
-      &.-main{
-        background: #9FA8DA;  /* fallback for old browsers */
-        background: linear-gradient(to right, #9FA8DA, #5C6BC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        h1,h3,p{
-          color: $textLightPrimary;
-        }
-      }
-
-      h1 {
-        font-size: 3em;
-      }
-    }
-
-    .content {
-      @include grid-media($neat-grid-tablet) {
-        @include grid-column(12, $custom-neat-grid);
-      }
-      flex: 1;
-      position: relative;
-
-      .setLang {
-        display: none;
-        @include grid-media($neat-grid-tablet) {
-          @include grid-column(6,$custom-neat-grid);
-          display: flex;
-          display: block;
-          top: 0;
-          right: 0;
-          position: absolute;
-        }
-        // @include grid-push(2);
-        // flex: 1;
-        background: darken(#F3F3F4,6);
-
-        ul {
-          margin: 0;
-          list-style: none;
-          padding: 0;
-          display: inline-block;
-
-          li {
-            display: block;
-            float: left;
-            margin: 0.4rem 1rem;
-            cursor: pointer;
-            padding: 0.4rem 1rem;
-            font-size: 1.6rem;
-            border: 1px solid rgba(0,0,0,0);
-
-            &.current {
-              background: darken(#FCFCFC,24);
-              border: 1px solid darken(#FCFCFC,16);
-              border-radius: 1rem;
-            }
-          }
-        }
-      }
-
-      .method {
-        border-bottom: 1px solid $textDarkDivider;
-        @include grid-media($neat-grid-tablet) {
-          display: flex;
-        }
-
-        .method-description {
-          @include grid-column(12,$custom-neat-grid);
-          @include grid-media($neat-grid-tablet) {
-            @include grid-column(6,$custom-neat-grid);
-          }
-          //  flex: 1;
-          font-size: 1.8rem;
-          padding: $basePadding*2;
-          background: #FFF;
-          //  border-right: 1px solid $textDarkDivider;
-          code {
-            background: darken(#FCFCFC,6);
-            border-radius: 0.4rem;
-            padding: 0.4rem 0.8rem;
-          }
-        }
-
-        .method-example {
-          @include grid-column(12,$custom-neat-grid);
-          display: block;
-          @include grid-media($neat-grid-tablet) {
-            @include grid-column(6,$custom-neat-grid);
-          }
-          //  background: darken(#FCFCFC,6);
-          background: #F3F3F4;
-          //  flex: 1;
-          font-size: 1.6rem;
-          padding: $basePadding*2;
-
-          .tab-content {
-            display: none;
-
-            &.current {
-              display: block;
-            }
-          }
-
-          .hljs {
-            //  background: darken(#FCFCFC,6);
-            background: #F3F3F4;
-          }
-        }
-      }
-    }
-  }
 }
