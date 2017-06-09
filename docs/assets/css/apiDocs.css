@@ -3470,7 +3470,7 @@ html {
       font-size: 62.5%; } }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.2; }
 
 h1, h2, h3, h4, h5 {
@@ -3497,8 +3497,9 @@ h5 {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.5; }
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 1.4rem; }
 
 .btn {
   display: inline-block;
@@ -3855,6 +3856,17 @@ body {
             background: #ededed;
             border-radius: 0.4rem;
             padding: 0.4rem 0.8rem; }
+          .apiDocs .wrap .content .method .method-description h1 {
+            margin-bottom: 0; }
+          .apiDocs .wrap .content .method .method-description .badge {
+            background: #a3a3ab;
+            color: white;
+            font-size: 1.4rem;
+            padding: .2rem .8rem;
+            border-radius: .4rem;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            display: inline-block;
+            vertical-align: middle; }
         .apiDocs .wrap .content .method .method-example {
           width: calc(100%);
           float: left;

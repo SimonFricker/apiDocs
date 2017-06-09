@@ -316,7 +316,7 @@ body {
                 }
                 // @include grid-push(2);
                 // flex: 1;
-                background: darken(#F3F3F4,6);
+                background: darken($codeHighlight,6);
 
                 ul {
                     margin: 0;
@@ -363,6 +363,21 @@ body {
                         border-radius: 0.4rem;
                         padding: 0.4rem 0.8rem;
                     }
+
+                    h1{
+                      margin-bottom: 0;
+                    }
+
+                    .badge{
+                      background: darken($codeHighlight, 30);
+                      color: white;
+                      font-size: 1.4rem;
+                      padding: .2rem .8rem;
+                      border-radius: .4rem;
+                      border: 1px solid $textDarkDivider;
+                      display: inline-block;
+                      vertical-align: middle;
+                    }
                 }
 
                 .method-example {
@@ -372,7 +387,7 @@ body {
                          @include grid-column(6,$custom-neat-grid);
                     }
                     //  background: darken(#FCFCFC,6);
-                    background: #F3F3F4;
+                    background: $codeHighlight;
                     //  flex: 1;
                     font-size: 1.6rem;
                     padding: $basePadding*2;
@@ -387,7 +402,7 @@ body {
 
                     .hljs {
                         //  background: darken(#FCFCFC,6);
-                        background: #F3F3F4;
+                        background: $codeHighlight;
                     }
                 }
             }
