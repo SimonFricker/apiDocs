@@ -452,7 +452,7 @@ $(window).on("load resize scroll", function(e) {
           $("#navInner").stick_in_parent();
           $(".setLang").stick_in_parent();
         } else {
-            //...
+            $(".setLang").stick_in_parent({offset_top: 50});
         }
 
 
@@ -572,9 +572,12 @@ $(window).on("load resize scroll", function(e) {
         $(".setLang").width(widthss);
       } else {
 
+
+
       }
 
   });
+
 
 
 

@@ -295,14 +295,17 @@ body {
         }
 
         .content {
+
+          flex: 1;
+          position: relative;
+              display: flow-root;
             @include grid-media($neat-grid-tablet) {
                  @include grid-column(12, $custom-neat-grid);
             }
-            flex: 1;
-            position: relative;
+
 
             .setLang {
-                display: none;
+                // display: none;
                 @include grid-media($neat-grid-tablet) {
                      @include grid-column(6,$custom-neat-grid);
                     display: flex;

@@ -3796,14 +3796,14 @@ body {
     .apiDocs .wrap .content {
       -ms-flex: 1;
       flex: 1;
-      position: relative; }
+      position: relative;
+      display: flow-root; }
       @media only screen and (min-width: 768px) {
         .apiDocs .wrap .content {
           width: calc(100%);
           float: left;
           margin-left: 0; } }
       .apiDocs .wrap .content .setLang {
-        display: none;
         background: #e3e3e5; }
         @media only screen and (min-width: 768px) {
           .apiDocs .wrap .content .setLang {
