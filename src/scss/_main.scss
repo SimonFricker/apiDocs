@@ -194,6 +194,7 @@ body {
                 }
                 @include grid-media($neat-grid-tablet) {
                     display: block;
+                      padding-bottom: 10rem;
                 }
 
                 .search {
@@ -260,7 +261,39 @@ body {
                     }
                 }
             }
+
+
+
+
+
+
         }
+
+        .support{
+          display: none;
+          @include grid-media($neat-grid-tablet) {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            padding: $basePadding;
+            background: darken($themeColorPrimary, 10);
+
+            p{
+              color: $textLightPrimary;
+              margin-bottom: 0;
+              font-size: 1.4rem;
+
+              &:first-of-type{
+                // font-weight: 800;
+
+              }
+            }
+          }
+
+
+
+        }
+
     }
 
     .wrap {

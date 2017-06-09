@@ -3479,7 +3479,7 @@ h1, h2, h3, h4, h5 {
   margin: 0; }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: .4rem; }
 
 h2 {
@@ -3721,7 +3721,8 @@ body {
           overflow: visible; }
         @media only screen and (min-width: 768px) {
           .apiDocs .nav #navInner .docsNav {
-            display: block; } }
+            display: block;
+            padding-bottom: 10rem; } }
         .apiDocs .nav #navInner .docsNav .search {
           display: block;
           padding: 1.4rem; }
@@ -3770,6 +3771,19 @@ body {
               background: #4f83cc; }
               .apiDocs .nav #navInner .docsNav ul li.active a {
                 color: white; }
+    .apiDocs .nav .support {
+      display: none; }
+      @media only screen and (min-width: 768px) {
+        .apiDocs .nav .support {
+          display: block;
+          position: fixed;
+          bottom: 0;
+          padding: 1.4rem;
+          background: #194571; }
+          .apiDocs .nav .support p {
+            color: white;
+            margin-bottom: 0;
+            font-size: 1.4rem; } }
   .apiDocs .wrap {
     margin-top: 50px; }
     @media only screen and (min-width: 768px) {
