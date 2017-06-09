@@ -272,6 +272,7 @@ body {
         .support{
           display: none;
           @include grid-media($neat-grid-tablet) {
+            @include grid-column(2, $custom-neat-grid);
             display: block;
             position: fixed;
             bottom: 0;
