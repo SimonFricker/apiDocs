@@ -412,6 +412,53 @@ body {
                       display: inline-block;
                       vertical-align: middle;
                     }
+
+                    .info{
+
+                      .feild{
+                        display: flex;
+                         margin-bottom: .8rem;
+                        .key{
+                          flex: 1 0 0;
+                          text-align: right;
+
+                          .response {
+                            font-size: 1.4rem;
+                            &.-error{
+                              color: $colorDanger;
+                            }
+
+                            &.-success{
+                              color: $colorSuccess;
+                            }
+
+                            &.-defalt{
+                              color: $textDarkHint;
+                            }
+
+
+
+                          }
+                          .badge{
+                            background: darken($codeHighlight, 15);
+                                margin-top: .4rem;
+
+                          }
+                        }
+
+                        .description{
+                           flex: 2 0 0;
+                           text-align: left;
+                           padding-left: 1.4rem;
+
+                           p{
+                             margin-bottom: .2rem;
+                           }
+
+
+                        }
+                      }
+                    }
                 }
 
                 .method-example {
