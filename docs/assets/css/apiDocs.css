@@ -3831,12 +3831,11 @@ body {
             width: calc(50%);
             float: left;
             margin-left: 0;
-            display: -ms-flexbox;
-            display: flex;
             display: block;
             top: 0;
             right: 0;
-            position: absolute; } }
+            position: absolute;
+            height: 4.2rem; } }
         .apiDocs .wrap .content .setLang ul {
           margin: 0;
           list-style: none;
@@ -3845,15 +3844,16 @@ body {
           .apiDocs .wrap .content .setLang ul li {
             display: block;
             float: left;
-            margin: 0.4rem 1rem;
             cursor: pointer;
-            padding: 0.4rem 1rem;
+            padding: 0 1.6rem;
             font-size: 1.6rem;
-            border: 1px solid transparent; }
+            height: 4.2rem;
+            border-bottom: 3px solid transparent;
+            line-height: 4.2rem;
+            color: rgba(0, 0, 0, 0.54); }
             .apiDocs .wrap .content .setLang ul li.current {
-              background: #bfbfbf;
-              border: 1px solid lightgray;
-              border-radius: 1rem; }
+              color: rgba(0, 0, 0, 0.87);
+              border-bottom: 3px solid #01579b; }
       .apiDocs .wrap .content .method {
         border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
         @media only screen and (min-width: 768px) {

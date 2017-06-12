@@ -35,6 +35,7 @@ body {
         justify-content: space-between;
         border-right: 1px solid $textDarkDivider;
         background: #01579b;
+        // background: #586994;
         // for tablets and up // must be second
         @include grid-media($neat-grid-tablet) {
              @include grid-column(2, $custom-neat-grid);
@@ -342,15 +343,18 @@ body {
                 // display: none;
                 @include grid-media($neat-grid-tablet) {
                      @include grid-column(6,$custom-neat-grid);
-                    display: flex;
+
                     display: block;
                     top: 0;
                     right: 0;
                     position: absolute;
+                        height: 4.2rem;
+                    // @include grid-push(2);
+                    // @include grid-collapse();
                 }
                 // @include grid-push(2);
                 // flex: 1;
-                background: darken($codeHighlight,6);
+                background: darken($codeHighlight, 6);
 
                 ul {
                     margin: 0;
@@ -361,16 +365,20 @@ body {
                     li {
                         display: block;
                         float: left;
-                        margin: 0.4rem 1rem;
+
                         cursor: pointer;
-                        padding: 0.4rem 1rem;
+                        padding: 0 1.6rem;
                         font-size: 1.6rem;
-                        border: 1px solid rgba(0,0,0,0);
+                        height: 4.2rem;
+                        border-bottom: 3px solid transparent;
+                        line-height: 4.2rem;
+                        color: $textDarkSecondary;
 
                         &.current {
-                            background: darken(#FCFCFC,24);
-                            border: 1px solid darken(#FCFCFC,16);
-                            border-radius: 1rem;
+                            // background: darken(#FCFCFC,24);
+                            // border-bottom: 3px solid darken($codeHighlight,24);
+                            color: $textDarkPrimary;
+                            border-bottom: 3px solid #01579b;
                         }
                     }
                 }
