@@ -3595,7 +3595,6 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    padding: 0 2.8rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -3615,6 +3614,7 @@ body {
       float: left;
       margin-left: 0; }
       .apiDocs .navMain #navInner .brand {
+        margin-left: 1.4rem;
         min-height: 50px;
         text-align: center;
         float: left;
@@ -3645,7 +3645,8 @@ body {
         -ms-flex-align: center;
         align-items: center;
         -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+        margin-right: 1.4rem; }
         @media only screen and (min-width: 768px) {
           .apiDocs .navMain #navInner .menu-toggle {
             display: none; } }
