@@ -28,13 +28,15 @@ body {
         top: 0;
         left: 0;
         z-index: 999;
+
         // display: flex;
         // align-items: center;
         display: flex;
         justify-content: space-between;
         border-right: 1px solid $textDarkDivider;
-        background: #01579b;
-        // background: #586994;
+        background: $themeColorPrimary;
+        // background: #4F6493;
+        // background: #1D1856;
         // for tablets and up // must be second
         @include grid-media($neat-grid-tablet) {
              @include grid-column(2, $custom-neat-grid);
@@ -250,7 +252,7 @@ body {
 
                             &:hover,
                             :focus {
-                                border: 1px solid $themeColor;
+                                border: 1px solid $themeColorPrimary;
                                 outline: none;
                             }
                         }
@@ -266,16 +268,21 @@ body {
                 }
 
                 ul.nav {
-                    margin-top: 0;
+                    margin: 0;
                     list-style: none;
                     padding: 0;
                     width: 100%;
+
+                    @include grid-media($neat-grid-tablet) {
+                        margin: $basePadding 0;
+                    }
+
 
                     li {
                         a {
                             text-decoration: none;
                             color: $textLightSecondary;
-                            padding: $basePadding/2 $basePadding;
+                            padding: $basePadding/4 $basePadding;
                             display: block;
                             font-weight: 600;
                             border-left: 3px solid transparent;
@@ -293,12 +300,12 @@ body {
 
                             a {
                                 color: $textLightPrimary;
-                                border-left: 3px solid #4f83cc;
+                                border-left: 3px solid lighten($themeColorPrimary, 28);
                             }
 
                             ul.nav {
                                 display: block;
-                                margin-bottom: $basePadding/2;
+                                margin-bottom: $basePadding/4;
 
                                 li {
                                     a {
@@ -313,7 +320,7 @@ body {
                                         a {
                                             color: $textLightPrimary;
                                             font-weight: 600;
-                                            border-left: 3px solid #4f83cc;
+                                            border-left: 3px solid lighten($themeColorPrimary, 28);
                                         }
                                     }
                                 }
@@ -340,7 +347,7 @@ body {
                 position: fixed;
                 bottom: 0;
                 padding: $basePadding;
-                background: darken($themeColorPrimary, 10);
+                background: darken($themeColorPrimary, 8);
 
                 p {
                     color: $textLightPrimary;
@@ -368,13 +375,13 @@ body {
         }
 
         .header {
-            padding: $basePadding*8 $basePadding $basePadding*4;
+            padding: $basePadding*6 $basePadding $basePadding*4;
             display: inline-block;
             background: #FFF;
             border-bottom: 1px solid $textDarkDivider;
 
             @include grid-media($neat-grid-tablet) {
-              padding: $basePadding*12 $basePadding*2 $basePadding*4;
+              padding: $basePadding*8 $basePadding*2 $basePadding*4;
             }
 
 
@@ -450,6 +457,10 @@ body {
                 border-bottom: 1px solid $textDarkDivider;
                 display: flex;
                 flex-direction: column;
+
+                &:focus{
+                  outline: none;
+                }
 
 
                 @include grid-media($neat-grid-tablet) {

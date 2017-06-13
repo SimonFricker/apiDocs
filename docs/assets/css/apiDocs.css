@@ -3534,31 +3534,31 @@ strong {
   .btn.-rounded {
     border-radius: 40px; }
   .btn.-primary {
-    background: #225F9B;
+    background: #17629B;
     color: white;
-    border: 1px solid #194571; }
+    border: 1px solid #10466f; }
     .btn.-primary:hover {
-      background: #194571; }
+      background: #10466f; }
     .btn.-primary.-outline {
       background: transparent;
-      border: 2px solid #225F9B;
-      color: #225F9B; }
+      border: 2px solid #17629B;
+      color: #17629B; }
       .btn.-primary.-outline:hover {
-        background: #9fc5ea;
-        color: #194571; }
+        background: #90c5ee;
+        color: #10466f; }
   .btn.-secondary {
-    background: #FF9D5B;
+    background: #F1A208;
     color: white;
-    border: 1px solid #ff7f28; }
+    border: 1px solid #c08106; }
     .btn.-secondary:hover {
-      background: #ff7f28; }
+      background: #f8ae20; }
     .btn.-secondary.-outline {
       background: transparent;
-      border: 2px solid #FF9D5B;
-      color: #FF9D5B; }
+      border: 2px solid #F1A208;
+      color: #F1A208; }
       .btn.-secondary.-outline:hover {
-        background: white;
-        color: #ff7f28; }
+        background: #fdebc8;
+        color: #c08106; }
   .btn.-light {
     background: white;
     color: black; }
@@ -3600,7 +3600,7 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
-    background: #01579b; }
+    background: #17629B; }
     @media only screen and (min-width: 768px) {
       .apiDocs .navMain {
         width: calc(16.66667%);
@@ -3765,7 +3765,7 @@ body {
                 color: rgba(0, 0, 0, 0.54); }
               .apiDocs .navMain #navInner .docsNav .search .form-group input:hover,
               .apiDocs .navMain #navInner .docsNav .search .form-group input :focus {
-                border: 1px solid rgba(17, 15, 123, 0.8);
+                border: 1px solid #17629B;
                 outline: none; }
             .apiDocs .navMain #navInner .docsNav .search .form-group .addon {
               position: absolute;
@@ -3774,14 +3774,17 @@ body {
               line-height: 3rem;
               color: rgba(0, 0, 0, 0.54); }
         .apiDocs .navMain #navInner .docsNav ul.nav {
-          margin-top: 0;
+          margin: 0;
           list-style: none;
           padding: 0;
           width: 100%; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .navMain #navInner .docsNav ul.nav {
+              margin: 1.4rem 0; } }
           .apiDocs .navMain #navInner .docsNav ul.nav li a {
             text-decoration: none;
             color: rgba(255, 255, 255, 0.7);
-            padding: 0.7rem 1.4rem;
+            padding: 0.35rem 1.4rem;
             display: block;
             font-weight: 600;
             border-left: 3px solid transparent; }
@@ -3793,10 +3796,10 @@ body {
               display: inline-block; } }
           .apiDocs .navMain #navInner .docsNav ul.nav li.active a {
             color: white;
-            border-left: 3px solid #4f83cc; }
+            border-left: 3px solid #5aaae7; }
           .apiDocs .navMain #navInner .docsNav ul.nav li.active ul.nav {
             display: block;
-            margin-bottom: 0.7rem; }
+            margin-bottom: 0.35rem; }
             .apiDocs .navMain #navInner .docsNav ul.nav li.active ul.nav li a {
               padding: 0.35rem 2.24rem;
               color: rgba(255, 255, 255, 0.7);
@@ -3806,7 +3809,7 @@ body {
             .apiDocs .navMain #navInner .docsNav ul.nav li.active ul.nav li.active a {
               color: white;
               font-weight: 600;
-              border-left: 3px solid #4f83cc; }
+              border-left: 3px solid #5aaae7; }
           @media only screen and (min-width: 768px) {
             .apiDocs .navMain #navInner .docsNav ul.nav li .nav {
               display: none; } }
@@ -3821,7 +3824,7 @@ body {
           position: fixed;
           bottom: 0;
           padding: 1.4rem;
-          background: #194571; }
+          background: #124c77; }
           .apiDocs .navMain .support p {
             color: white;
             margin-bottom: 0;
@@ -3841,13 +3844,13 @@ body {
         margin-left: 0;
         margin-top: 0; } }
     .apiDocs .wrap .header {
-      padding: 11.2rem 1.4rem 5.6rem;
+      padding: 8.4rem 1.4rem 5.6rem;
       display: inline-block;
       background: #FFF;
       border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
       @media only screen and (min-width: 768px) {
         .apiDocs .wrap .header {
-          padding: 16.8rem 2.8rem 5.6rem; } }
+          padding: 11.2rem 2.8rem 5.6rem; } }
       .apiDocs .wrap .header.-main {
         background: #9FA8DA;
         background: linear-gradient(to right, #9FA8DA, #5C6BC0); }
@@ -3908,6 +3911,8 @@ body {
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column; }
+        .apiDocs .wrap .content .method:focus {
+          outline: none; }
         @media only screen and (min-width: 768px) {
           .apiDocs .wrap .content .method {
             display: -ms-flexbox;

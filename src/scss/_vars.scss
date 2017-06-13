@@ -55,8 +55,9 @@ $bgFillDarkPrimary: rgba(0, 0, 0, 0.3);
 $bgFillLightPrimary: rgba(255, 255, 255, 0.5);
 
 // Theme
-$themeColorPrimary: #225F9B; //#5CB988;
-$themeColorSecondary: #FF9D5B;//#F0C987;
+$themeColorPrimary: #17629B; //#225F9B; //#5CB988;
+$themeColorSecondary: #F1A208;//#F0C987;
+
 
 @mixin themeGradientLinearPrimary {
   background: $themeColorPrimary; /* fallback for old browsers */
