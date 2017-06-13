@@ -8,8 +8,8 @@ $(window).on("load resize scroll", function(e) {
           $(".setLang").stick_in_parent();
         } else {
 
-          var navHeight = $("nav.nav").outerHeight();
-            $(".setLang").stick_in_parent({offset_top: navHeight});
+          // var navHeight = $("nav.nav").height();
+            $(".setLang").stick_in_parent({offset_top: 50});
         }
 
 });
@@ -50,57 +50,6 @@ $('a[href^="#"]')
             }
         }
     });
-//
-// // Scroll spy - http://jsfiddle.net/mekwall/up4nu/
-// var lastId,
-//     topMenu = $(".docsNav"),
-//     topMenuHeight = topMenu.outerHeight() + 15,
-//     // All list items
-//     menuItems = topMenu.find("a"),
-//     // Anchors corresponding to menu items
-//     scrollItems = menuItems.map(function() {
-//         var item = $($(this).attr("href"));
-//         if (item.length) {
-//             return item;
-//         }
-//     });
-//
-// // Bind click handler to menu items
-// // so we can get a fancy scroll animation
-// menuItems.click(function(e) {
-//     var href = $(this).attr("href"),
-//         offsetTop = href === '#' ? 0 : $(href).offset().top - topMenuHeight + 1;
-//     $('html, body').stop().animate({
-//         scrollTop: offsetTop
-//     }, 300);
-//     e.preventDefault();
-// });
-//
-// // Bind to scroll
-// $(window).scroll(function() {
-//     // Get container scroll position
-//     var fromTop = $(this).scrollTop() + topMenuHeight;
-//
-//     // Get id of current scroll item
-//     var cur = scrollItems.map(function() {
-//         if ($(this).offset().top < fromTop)
-//             return this;
-//     });
-//     // Get the id of the current element
-//     cur = cur[cur.length - 1];
-//     var id = cur && cur.length ? cur[0].id : "";
-//
-//     if (lastId !== id) {
-//         lastId = id;
-//         // Set/remove active class
-//         menuItems
-//             .parent().removeClass("active")
-//             .end().filter("[href='#" + id + "']").parent().addClass("active");
-//     }
-//
-// });
-
-// gumshoe.init();
 
 
 ///menu toggle
@@ -115,8 +64,29 @@ $('#navInner .menu-toggle a').on('click', function (ev) {
 
 
 
+//scrollspy
+
+        //
+        // $('[data-spy="scroll"]').each(function () {
+        //   var $spy = $(this).scrollspy('refresh')
+        // })
+
+// $(window).on("load resize scroll", function(e) {
 //
-$('body').scrollspy({ target: '.docsNav' })
+//
+//   if($(window).width() > 768)
+//       {
+//         // $('body').scrollspy({ target: '.docsNav' })
+//
+//
+//
+//
+//       } else {
+//
+//       }
+//
+//   });
+
 
 // Language position
 $(window).on("load resize scroll", function(e) {

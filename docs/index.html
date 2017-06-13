@@ -20,7 +20,7 @@
   </title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".docsNav">
 
   <section class="apiDocs">
     <div class="container">
@@ -65,7 +65,7 @@
 
 
 
-            <!-- <div class="search">
+            <div class="search">
 
               <form class="" action="#" method="post">
                 <div class="form-group">
@@ -76,36 +76,44 @@
                 </div>
               </form>
 
-            </div> -->
+            </div>
             <ul class="nav nav-stacked">
+
               <li>
-                <a href="#sec1" class="">sec1</a>
+                <a href="#welcome" class="">Welcome</a>
+              </li>
+
+              <li>
+                <a href="#sec1" class="">Section 1</a>
                 <ul class="nav">
                   <li>
-                    <a href="#sec1a" class="">sec1a</a>
+                    <a href="#sec1a" class="">Sub Section 1</a>
                   </li>
                   <li>
-                    <a href="#sec1b" class="">sec1b</a>
+                    <a href="#sec1b" class="">Sub Section 2</a>
+                  </li>
+                  <li>
+                    <a href="#sec1c" class="">SubSection 3</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#sec2" class="">sec2</a>
+                <a href="#sec2" class="">Section 2</a>
                 <ul class="nav">
                   <li>
-                    <a href="#sec2a" class="">sec2a</a>
+                    <a href="#sec2a" class="">Sub Section 1</a>
                   </li>
                   <li>
-                    <a href="#sec2b" class="">sec2b</a>
+                    <a href="#sec2b" class="">Sub Section 2</a>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <a href="#sec3" class="">sec3</a>
+                <a href="#sec3" class="">Section 3</a>
               </li>
               <li>
-                <a href="#sec4" class="">sec4</a>
+                <a href="#sec4" class="">Section 4</a>
               </li>
             </ul>
           </div>
@@ -126,7 +134,7 @@
       <div id="wrap" class="wrap">
 
 
-        <div class="header -main">
+        <div id="welcome" class="header -main">
           <h1>apiDocs</h1>
           <h3>Free to use documentation template</h3>
           <p>Bacon ipsum dolor amet chuck tongue shank, porchetta brisket swine drumstick pork chop ball tip jerky andouille cow venison beef tenderloin. Corned beef jowl chuck turkey, tail pancetta frankfurter pig t-bone cow porchetta. Pork belly
@@ -403,7 +411,7 @@ function Triangle(base,height){
               </div>
             </div>
           </div>
-    
+
 
 
 
@@ -497,6 +505,95 @@ function Triangle(base,height){
             </div>
           </div>
 
+          
+
+
+          <div class="method" id="sec1c">
+            <div class="method-description">
+              <h1>sec2</h1>
+              <p>
+                Bacon ipsum dolor amet chuck tongue shank, porchetta brisket swine drumstick pork chop ball tip jerky andouille cow venison beef tenderloin. Corned beef jowl chuck turkey, tail pancetta frankfurter pig t-bone cow porchetta. Pork belly strip steak pork
+                chop picanha cupim spare ribs ham pancetta turkey pork loin bacon shoulder sausage cow. Short loin hamburger prosciutto cupim ground round landjaeger. Beef ribs rump ham hock picanha, pancetta pork shoulder alcatra turkey
+                short ribs. <code>test.script();</code> Jerky shank brisket doner ham hock andouille hamburger bresaola beef ribeye boudin ground round jowl pork loin.
+              </p>
+            </div>
+            <div class="method-example">
+              <div id="" class="tab-1 tab-content current">
+                <pre><code>
+
+PHP LOL
+function Shape(){
+  // this is a comment
+  this.name = 'Shape';
+  this.toString = function(){return this.name;};
+}
+
+
+function Shape2D(){
+  this.name = 'Shape 2D';
+}
+
+function Triangle(base,height){
+  this.name = 'Triangle';
+  this.base = base;
+  this.height = height;
+  this.getArea = function(){return this.base*this.height/2;};
+}
+
+                </code></pre>
+              </div>
+
+              <div class="tab-2 tab-content">
+                <pre><code>
+
+cURL lol
+function Shape(){
+  // this is a comment
+  this.name = 'Shape';
+  this.toString = function(){return this.name;};
+}
+
+
+function Shape2D(){
+  this.name = 'Shape 2D';
+}
+
+function Triangle(base,height){
+  this.name = 'Triangle';
+  this.base = base;
+  this.height = height;
+  this.getArea = function(){return this.base*this.height/2;};
+}
+
+                </code></pre>
+              </div>
+
+              <div class="tab-3 tab-content">
+                <pre><code>
+
+etc lol
+function Shape(){
+  // this is a comment
+  this.name = 'Shape';
+  this.toString = function(){return this.name;};
+}
+
+
+function Shape2D(){
+  this.name = 'Shape 2D';
+}
+
+function Triangle(base,height){
+  this.name = 'Triangle';
+  this.base = base;
+  this.height = height;
+  this.getArea = function(){return this.base*this.height/2;};
+}
+
+                </code></pre>
+              </div>
+            </div>
+          </div>
 
           <div class="method" id="sec2">
             <div class="method-description">
@@ -584,6 +681,8 @@ function Triangle(base,height){
               </div>
             </div>
           </div>
+
+
 
           <div class="method" id="sec2a">
             <div class="method-description">
@@ -849,7 +948,7 @@ function Triangle(base,height){
 
           <div class="method" id="sec4">
             <div class="method-description">
-              <h1>sec4</h1>
+              <h1>Section 4</h1>
               <p>
                 Bacon ipsum dolor amet chuck tongue shank, porchetta brisket swine drumstick pork chop ball tip jerky andouille cow venison beef tenderloin. Corned beef jowl chuck turkey, tail pancetta frankfurter pig t-bone cow porchetta. Pork belly strip steak pork
                 chop picanha cupim spare ribs ham pancetta turkey pork loin bacon shoulder sausage cow. Short loin hamburger prosciutto cupim ground round landjaeger. Beef ribs rump ham hock picanha, pancetta pork shoulder alcatra turkey

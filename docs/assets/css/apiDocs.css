@@ -3464,7 +3464,7 @@ hue-6-2: #c18401
       margin-left: 28px; } }
 
 html {
-  font-size: 40%; }
+  font-size: 54%; }
   @media only screen and (min-width: 768px) {
     html {
       font-size: 62.5%; } }
@@ -3770,24 +3770,32 @@ body {
             text-decoration: none;
             color: rgba(255, 255, 255, 0.7);
             padding: 0.7rem 1.4rem;
-            display: block; }
-          .apiDocs .navMain #navInner .docsNav ul.nav li.active {
-            border-right: 3px solid #4f83cc; }
-            @media only screen and (min-width: 768px) {
-              .apiDocs .navMain #navInner .docsNav ul.nav li.active {
-                width: 100%;
-                display: inline-block; } }
-            .apiDocs .navMain #navInner .docsNav ul.nav li.active a {
-              color: white; }
-            .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav {
-              display: block; }
-              .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li a {
-                padding: 0.35rem 1.4rem;
-                color: rgba(255, 255, 255, 0.7); }
-              .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li.active a {
-                color: white; }
-          .apiDocs .navMain #navInner .docsNav ul.nav li .nav {
-            display: none; }
+            display: block;
+            font-weight: 600;
+            border-left: 3px solid transparent; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active {
+              width: 100%;
+              display: inline-block; } }
+          .apiDocs .navMain #navInner .docsNav ul.nav li.active a {
+            color: white;
+            border-left: 3px solid #4f83cc; }
+          .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav {
+            display: block;
+            margin-bottom: 0.7rem; }
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li a {
+              padding: 0.35rem 2.24rem;
+              color: rgba(255, 255, 255, 0.7);
+              font-weight: 400;
+              font-size: 1.4rem;
+              border-left: 3px solid transparent; }
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li.active a {
+              color: white;
+              font-weight: 600;
+              border-left: 3px solid #4f83cc; }
+          @media only screen and (min-width: 768px) {
+            .apiDocs .navMain #navInner .docsNav ul.nav li .nav {
+              display: none; } }
     .apiDocs .navMain .support {
       display: none; }
       @media only screen and (min-width: 768px) {
@@ -3845,17 +3853,20 @@ body {
           float: left;
           margin-left: 0; } }
       .apiDocs .wrap .content .setLang {
+        display: block;
+        top: 0;
+        right: 0;
+        position: absolute;
+        height: 4.2rem;
+        width: 100%;
+        padding: 0 1.4rem;
         background: #e3e3e5; }
         @media only screen and (min-width: 768px) {
           .apiDocs .wrap .content .setLang {
             width: calc(50%);
             float: left;
             margin-left: 0;
-            display: block;
-            top: 0;
-            right: 0;
-            position: absolute;
-            height: 4.2rem; } }
+            padding: 0; } }
         .apiDocs .wrap .content .setLang ul {
           margin: 0;
           list-style: none;
@@ -3875,11 +3886,17 @@ body {
               color: rgba(0, 0, 0, 0.87);
               border-bottom: 3px solid #01579b; }
       .apiDocs .wrap .content .method {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column; }
         @media only screen and (min-width: 768px) {
           .apiDocs .wrap .content .method {
             display: -ms-flexbox;
-            display: flex; } }
+            display: flex;
+            -ms-flex-direction: row;
+            flex-direction: row; } }
         .apiDocs .wrap .content .method .method-description {
           width: calc(100%);
           float: left;

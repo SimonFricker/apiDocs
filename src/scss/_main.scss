@@ -255,10 +255,13 @@ body {
                             color: $textLightSecondary;
                               padding: $basePadding/2 $basePadding;
                                   display: block;
+                                  font-weight: 600;
+
+                                  border-left: 3px solid transparent;
                         }
 
                         &.active {
-                            border-right: 3px solid #4f83cc;
+
 
                             @include grid-media($neat-grid-tablet) {
                               width: 100%;
@@ -270,22 +273,28 @@ body {
 
                             a {
                                 color: $textLightPrimary;
+                                  border-left: 3px solid #4f83cc;
                             }
 
 
 
                             .nav{
                               display: block;
-
+                              margin-bottom: $basePadding/2;
                               li{
                                 a{
-                                    padding: $basePadding/4 $basePadding;
+                                    padding: $basePadding/4 $basePadding*1.6;
                                     color: $textLightSecondary;
+                                    font-weight: 400;
+                                    font-size: 1.4rem;
+                                    border-left: 3px solid transparent;
                                 }
 
                                 &.active{
                                   a{
                                     color: $textLightPrimary;
+                                    font-weight: 600;
+                                      border-left: 3px solid #4f83cc;
                                   }
                                 }
                               }
@@ -293,7 +302,11 @@ body {
                         }
 
                         .nav{
-                          display: none;
+
+                          @include grid-media($neat-grid-tablet) {
+                            display: none;
+                          }
+
 
                         }
 
@@ -387,16 +400,23 @@ body {
 
             .setLang {
                 // display: none;
+
+                display: block;
+                top: 0;
+                right: 0;
+                position: absolute;
+                    height: 4.2rem;
+                    width: 100%;
+
+                    padding: 0 $basePadding;
+
                 @include grid-media($neat-grid-tablet) {
                      @include grid-column(6,$custom-neat-grid);
 
-                    display: block;
-                    top: 0;
-                    right: 0;
-                    position: absolute;
-                        height: 4.2rem;
+
                     // @include grid-push(2);
                     // @include grid-collapse();
+                    padding: 0;
                 }
                 // @include grid-push(2);
                 // flex: 1;
@@ -432,8 +452,13 @@ body {
 
             .method {
                 border-bottom: 1px solid $textDarkDivider;
+
+                display: flex;
+                flex-direction: column;
+
                 @include grid-media($neat-grid-tablet) {
                     display: flex;
+                    flex-direction: row;
                 }
 
                 .method-description {

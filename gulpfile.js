@@ -24,10 +24,15 @@ gulp.task('watch', ['sass', 'concat-min-js',  'nodemon', 'browserSync'], functio
 
 gulp.task('browserSync', function(){
   browserSync.init(null, {
+
+
+
+
       proxy: "http://localhost:8080",
           files: ["docs/*.*"],
           browser: "google chrome",
           port: 7000,
+      
     });
 
 });
