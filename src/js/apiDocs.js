@@ -20,8 +20,8 @@ hljs.initHighlightingOnLoad();
 
 
 
-//
-// //smoothscroll
+
+//smoothscroll
 $('a[href^="#"]')
     .not('[href="#"]')
     .not('[href="#0"]')
@@ -36,7 +36,7 @@ $('a[href^="#"]')
             if (target.length) {
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top
+                    scrollTop: target.offset().top-80
                 }, 1000, function() {
                     var $target = $(target);
                     $target.focus();
@@ -65,7 +65,7 @@ $('#navInner .menu-toggle a').on('click', function (ev) {
 
 
 //scrollspy
-$('body').scrollspy({ target: '.docsNav' })
+$('body').scrollspy({ target: '.docsNav', offset:120 })
 
 
 // Language position

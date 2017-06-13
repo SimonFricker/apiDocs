@@ -32,7 +32,7 @@ gulp.task('browserSync', function(){
           files: ["docs/*.*"],
           browser: "google chrome",
           port: 7000,
-      
+
     });
 
 });
@@ -76,30 +76,13 @@ gulp.task('concat-min-js', function(){
     'src/js/apiDocs.js',
   ])
   .pipe(plumber())
-    .pipe(concat('apiDocs.js'))
-    // .pipe(uglify({errLogToConsole: true}))
+    .pipe(concat('apiDocs.min.js'))
+    .pipe(uglify({errLogToConsole: true}))
     .on('error', reportError)
     .pipe(gulp.dest('docs/assets/js/'))
     .pipe(browserSync.reload({stream: true}));
 });
 
-
-
-
-//
-//
-// gulp.task('js', function(){
-//   return gulp.src([
-//     'src/js/libs/*.js',
-//     'src/js/app.js',
-//   ])
-//   .pipe(plumber())
-//     .pipe(concat('apiDocs.min.js'))
-//     .pipe(uglify({errLogToConsole: true}))
-//     .on('error', reportError)
-//     .pipe(gulp.dest('docs/assets/js/'))
-//     .pipe(browserSync.reload({stream: true}));
-// });
 
 
 

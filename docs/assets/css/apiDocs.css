@@ -3870,8 +3870,7 @@ body {
         .apiDocs .wrap .content {
           width: calc(100%);
           float: left;
-          margin-left: 0;
-          padding-top: 0; } }
+          margin-left: 0; } }
       .apiDocs .wrap .content .setLang {
         display: block;
         top: 0;
@@ -3922,7 +3921,7 @@ body {
         .apiDocs .wrap .content .method .method-description {
           font-size: 1.8rem;
           background: #FFF;
-          padding: 5.6rem 1.4rem 2.8rem;
+          padding: 2.8rem 1.4rem;
           width: calc(100%);
           float: left;
           margin-left: 0; }
@@ -3931,7 +3930,7 @@ body {
               width: calc(50%);
               float: left;
               margin-left: 0;
-              padding: 2.8rem; } }
+              padding: 4.2rem 2.8rem 2.8rem; } }
           .apiDocs .wrap .content .method .method-description code {
             background: #ededed;
             border-radius: 0.4rem;
@@ -3986,7 +3985,7 @@ body {
               width: calc(50%);
               float: left;
               margin-left: 0;
-              padding: 2.8rem; } }
+              padding: 5.6rem 2.8rem; } }
           .apiDocs .wrap .content .method .method-example .tab-content {
             display: none; }
             .apiDocs .wrap .content .method .method-example .tab-content.current {

@@ -408,7 +408,7 @@ body {
             padding-top: 4.2rem;
             @include grid-media($neat-grid-tablet) {
                  @include grid-column(12, $custom-neat-grid);
-                 padding-top: 0;
+                //  padding-top: 0;
             }
 
             .setLang {
@@ -462,26 +462,28 @@ body {
                   outline: none;
                 }
 
+                // &:first-child{
+                //   font-size: 40rem;
+                //   .method-example{
+                //     background: black!important;
+                //   }
+                // }
 
                 @include grid-media($neat-grid-tablet) {
                     display: flex;
                     flex-direction: row;
                 }
 
-
-
-
-
                 .method-description {
 
                   font-size: 1.8rem;
                   background: #FFF;
-                  padding: $basePadding*4 $basePadding $basePadding*2;
+                  padding: $basePadding*2 $basePadding;
 
                     @include grid-column(12,$custom-neat-grid);
                     @include grid-media($neat-grid-tablet) {
                          @include grid-column(6,$custom-neat-grid);
-                         padding: $basePadding*2;
+                         padding: $basePadding*3 $basePadding*2 $basePadding*2;
                     }
 
 
@@ -559,7 +561,7 @@ body {
 
                     @include grid-media($neat-grid-tablet) {
                          @include grid-column(6,$custom-neat-grid);
-                         padding: $basePadding*2;
+                         padding: $basePadding*4 $basePadding*2;
                     }
 
 
