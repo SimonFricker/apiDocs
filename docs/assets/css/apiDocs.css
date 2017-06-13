@@ -3631,9 +3631,11 @@ body {
           margin: 0; }
         @media only screen and (min-width: 768px) {
           .apiDocs .navMain #navInner .brand {
-            padding: 4.2rem 1.4rem 1.4rem;
+            padding: 2.8rem 1.4rem 1.4rem;
             display: block;
-            float: none; } }
+            float: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            margin: 0 1.4rem; } }
       .apiDocs .navMain #navInner .menu-toggle {
         min-height: 50px;
         display: inline-block;
@@ -3652,7 +3654,7 @@ body {
             display: none; } }
         .apiDocs .navMain #navInner .menu-toggle .btnToggle .toggle {
           width: 30px;
-          height: 1px;
+          height: 2px;
           margin-bottom: 3px;
           background-color: white;
           display: block; }
@@ -3676,7 +3678,8 @@ body {
         @media only screen and (min-width: 768px) {
           .apiDocs .navMain #navInner .version {
             float: none;
-            display: block; } }
+            display: block;
+            padding: 1.4rem 1.4rem; } }
         .apiDocs .navMain #navInner .version .form-group .dropdown {
           position: relative;
           display: inline-block; }
@@ -3691,21 +3694,29 @@ body {
             font-size: 1.4rem;
             right: 1rem;
             font-family: "Ionicons";
-            color: black; }
+            color: white; }
+            @media only screen and (min-width: 768px) {
+              .apiDocs .navMain #navInner .version .form-group .dropdown:after {
+                color: rgba(0, 0, 0, 0.87); } }
           .apiDocs .navMain #navInner .version .form-group .dropdown select {
             width: 100%;
-            background-color: white;
-            color: black;
+            color: white;
+            background-color: transparent;
             font-size: 1.6rem;
             padding: 1rem 3.2rem 1rem 1.4rem;
             text-align: right;
             border: 0;
             margin: 0;
+            border: 1px solid white;
             border-radius: 5px;
             font-family: helvetica;
             text-overflow: '';
             -webkit-appearance: button;
             /* hide default arrow in chrome OSX */ }
+            @media only screen and (min-width: 768px) {
+              .apiDocs .navMain #navInner .version .form-group .dropdown select {
+                color: rgba(0, 0, 0, 0.87);
+                background-color: white; } }
             .apiDocs .navMain #navInner .version .form-group .dropdown select:focus {
               outline: none; }
             .apiDocs .navMain #navInner .version .form-group .dropdown select option:first-child {
@@ -3830,15 +3841,16 @@ body {
         margin-left: 0;
         margin-top: 0; } }
     .apiDocs .wrap .header {
-      padding: 16.8rem 2.8rem 5.6rem;
+      padding: 11.2rem 1.4rem 5.6rem;
       display: inline-block;
       background: #FFF;
       border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      @media only screen and (min-width: 768px) {
+        .apiDocs .wrap .header {
+          padding: 16.8rem 2.8rem 5.6rem; } }
       .apiDocs .wrap .header.-main {
         background: #9FA8DA;
-        /* fallback for old browsers */
-        background: linear-gradient(to right, #9FA8DA, #5C6BC0);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+        background: linear-gradient(to right, #9FA8DA, #5C6BC0); }
         .apiDocs .wrap .header.-main h1,
         .apiDocs .wrap .header.-main h3,
         .apiDocs .wrap .header.-main p {
@@ -3849,12 +3861,14 @@ body {
       -ms-flex: 1;
       flex: 1;
       position: relative;
-      display: flow-root; }
+      display: flow-root;
+      padding-top: 4.2rem; }
       @media only screen and (min-width: 768px) {
         .apiDocs .wrap .content {
           width: calc(100%);
           float: left;
-          margin-left: 0; } }
+          margin-left: 0;
+          padding-top: 0; } }
       .apiDocs .wrap .content .setLang {
         display: block;
         top: 0;
@@ -3901,17 +3915,18 @@ body {
             -ms-flex-direction: row;
             flex-direction: row; } }
         .apiDocs .wrap .content .method .method-description {
+          font-size: 1.8rem;
+          background: #FFF;
+          padding: 5.6rem 1.4rem 2.8rem;
           width: calc(100%);
           float: left;
-          margin-left: 0;
-          font-size: 1.8rem;
-          padding: 2.8rem;
-          background: #FFF; }
+          margin-left: 0; }
           @media only screen and (min-width: 768px) {
             .apiDocs .wrap .content .method .method-description {
               width: calc(50%);
               float: left;
-              margin-left: 0; } }
+              margin-left: 0;
+              padding: 2.8rem; } }
           .apiDocs .wrap .content .method .method-description code {
             background: #ededed;
             border-radius: 0.4rem;
@@ -3960,15 +3975,18 @@ body {
           display: block;
           background: #F3F3F4;
           font-size: 1.6rem;
-          padding: 2.8rem; }
+          padding: 2.8rem 1.4rem; }
           @media only screen and (min-width: 768px) {
             .apiDocs .wrap .content .method .method-example {
               width: calc(50%);
               float: left;
-              margin-left: 0; } }
+              margin-left: 0;
+              padding: 2.8rem; } }
           .apiDocs .wrap .content .method .method-example .tab-content {
             display: none; }
             .apiDocs .wrap .content .method .method-example .tab-content.current {
               display: block; }
-          .apiDocs .wrap .content .method .method-example .hljs {
-            background: #F3F3F4; }
+          .apiDocs .wrap .content .method .method-example pre {
+            margin: 0; }
+            .apiDocs .wrap .content .method .method-example pre .hljs {
+              background: #F3F3F4; }

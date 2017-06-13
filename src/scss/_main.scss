@@ -71,9 +71,11 @@ body {
                     margin: 0;
                 }
                 @include grid-media($neat-grid-tablet) {
-                    padding: $basePadding*3 $basePadding $basePadding;
+                    padding: $basePadding*2 $basePadding $basePadding;
                     display: block;
                     float: none;
+                    border-bottom: 1px solid $textLightHint;
+                    margin: 0 $basePadding;
                 }
             }
 
@@ -97,7 +99,7 @@ body {
                     // height: 20px;
                     .toggle {
                         width: 30px;
-                        height: 1px;
+                        height: 2px;
                         margin-bottom: 3px;
                         background-color: white;
                         display: block;
@@ -123,6 +125,7 @@ body {
                 @include grid-media($neat-grid-tablet) {
                     float: none;
                     display: block;
+                    padding: $basePadding $basePadding;
                 }
 
                 .form-group {
@@ -130,6 +133,7 @@ body {
                         // width: 100%;
                         position: relative;
                         display: inline-block;
+
 
                         &::after,
                         &::before {
@@ -141,28 +145,49 @@ body {
                         &:after {
                             content: "\f123";
                             position: absolute;
+                            // top: 25%;
                             top: 35%;
                             font-size: 1.4rem;
                             right: 1rem;
                             font-family: "Ionicons";
-                            color: black;
+                            color: $textLightPrimary;
+
+                            @include grid-media($neat-grid-tablet) {
+                                // top: 35%;
+                                color: $textDarkPrimary;
+                            }
+
                         }
 
                         select {
                             width: 100%;
-                            background-color: white;
-                            color: black;
+
+                            color: $textLightPrimary;
+
+                            background-color: transparent;
+
                             font-size: 1.6rem;
                             padding: 1rem 3.2rem 1rem 1.4rem;
+                            // padding: .6rem 3rem .6rem 1rem;
                             text-align: right;
                             border: 0;
                             margin: 0;
+
+                            border:1px solid white;
+
                             border-radius: 5px;
                             //text-indent: 0.01px;
                             font-family: helvetica;
                             text-overflow: '';
                             -webkit-appearance: button;
                             /* hide default arrow in chrome OSX */
+
+                            @include grid-media($neat-grid-tablet) {
+                                // padding: 1rem 3.2rem 1rem 1.4rem;
+                                color: $textDarkPrimary;
+                                                            background-color: $textLightPrimary;
+                            }
+
                             &:focus {
                                 outline: none;
                             }
@@ -343,16 +368,19 @@ body {
         }
 
         .header {
-            padding: $basePadding*12 $basePadding*2 $basePadding*4;
+            padding: $basePadding*8 $basePadding $basePadding*4;
             display: inline-block;
             background: #FFF;
             border-bottom: 1px solid $textDarkDivider;
 
+            @include grid-media($neat-grid-tablet) {
+              padding: $basePadding*12 $basePadding*2 $basePadding*4;
+            }
+
+
             &.-main {
                 background: #9FA8DA;
-                /* fallback for old browsers */
                 background: linear-gradient(to right, #9FA8DA, #5C6BC0);
-                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 h1,
                 h3,
                 p {
@@ -369,12 +397,14 @@ body {
             flex: 1;
             position: relative;
             display: flow-root;
+
+            padding-top: 4.2rem;
             @include grid-media($neat-grid-tablet) {
                  @include grid-column(12, $custom-neat-grid);
+                 padding-top: 0;
             }
 
             .setLang {
-                // display: none;
                 display: block;
                 top: 0;
                 right: 0;
@@ -384,12 +414,9 @@ body {
                 padding: 0 $basePadding;
                 @include grid-media($neat-grid-tablet) {
                      @include grid-column(6,$custom-neat-grid);
-                    // @include grid-push(2);
-                    // @include grid-collapse();
                     padding: 0;
                 }
-                // @include grid-push(2);
-                // flex: 1;
+
                 background: darken($codeHighlight, 6);
 
                 ul {
@@ -423,21 +450,30 @@ body {
                 border-bottom: 1px solid $textDarkDivider;
                 display: flex;
                 flex-direction: column;
+
+
                 @include grid-media($neat-grid-tablet) {
                     display: flex;
                     flex-direction: row;
                 }
 
+
+
+
+
                 .method-description {
+
+                  font-size: 1.8rem;
+                  background: #FFF;
+                  padding: $basePadding*4 $basePadding $basePadding*2;
+
                     @include grid-column(12,$custom-neat-grid);
                     @include grid-media($neat-grid-tablet) {
                          @include grid-column(6,$custom-neat-grid);
+                         padding: $basePadding*2;
                     }
-                    //  flex: 1;
-                    font-size: 1.8rem;
-                    padding: $basePadding*2;
-                    background: #FFF;
-                    //  border-right: 1px solid $textDarkDivider;
+
+
                     code {
                         background: darken(#FCFCFC,6);
                         border-radius: 0.4rem;
@@ -506,14 +542,15 @@ body {
                 .method-example {
                     @include grid-column(12,$custom-neat-grid);
                     display: block;
+                    background: $codeHighlight;
+                    font-size: 1.6rem;
+                    padding: $basePadding*2 $basePadding;
+
                     @include grid-media($neat-grid-tablet) {
                          @include grid-column(6,$custom-neat-grid);
+                         padding: $basePadding*2;
                     }
-                    //  background: darken(#FCFCFC,6);
-                    background: $codeHighlight;
-                    //  flex: 1;
-                    font-size: 1.6rem;
-                    padding: $basePadding*2;
+
 
                     .tab-content {
                         display: none;
@@ -522,11 +559,15 @@ body {
                             display: block;
                         }
                     }
+                    pre{
+                          margin: 0;
 
-                    .hljs {
-                        //  background: darken(#FCFCFC,6);
-                        background: $codeHighlight;
+                          .hljs {
+                              //  background: darken(#FCFCFC,6);
+                              background: $codeHighlight;
+                          }
                     }
+
                 }
             }
         }
