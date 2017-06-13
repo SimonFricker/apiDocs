@@ -3,16 +3,14 @@ console.log('apiDocs started');
 // Sticky navbar and set lang
 
 $(window).on("load resize scroll", function(e) {
-
-
-
         if (window.matchMedia('(min-width: 768px)').matches) {
           $("#navInner").stick_in_parent();
           $(".setLang").stick_in_parent();
         } else {
-            $(".setLang").stick_in_parent({offset_top: 50});
-        }
 
+          var navHeight = $("nav.nav").outerHeight();
+            $(".setLang").stick_in_parent({offset_top: navHeight});
+        }
 
 });
 
@@ -102,8 +100,7 @@ $('a[href^="#"]')
 //
 // });
 
-
-gumshoe.init();
+// gumshoe.init();
 
 
 ///menu toggle
@@ -118,7 +115,8 @@ $('#navInner .menu-toggle a').on('click', function (ev) {
 
 
 
-
+//
+$('body').scrollspy({ target: '.docsNav' })
 
 // Language position
 $(window).on("load resize scroll", function(e) {
@@ -130,13 +128,9 @@ $(window).on("load resize scroll", function(e) {
         $(".setLang").width(widthss);
       } else {
 
-
-
       }
 
   });
-
-
 
 
 // Language tabs
@@ -148,4 +142,4 @@ $(document).ready(function() {
         $('[data-tab="' + tab_id + '"]').addClass('current');
         $("." + tab_id).addClass('current');
     })
-})
+});

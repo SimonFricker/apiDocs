@@ -192,6 +192,8 @@ body {
                     clear: both;
                     margin: 0 auto;
                     overflow: visible;
+
+
                 }
                 @include grid-media($neat-grid-tablet) {
                     display: block;
@@ -243,6 +245,7 @@ body {
                     margin-top: 0;
                     list-style: none;
                     padding: 0;
+                        width: 100%;
 
                     li {
                         padding: $basePadding/2 $basePadding;
@@ -254,6 +257,14 @@ body {
 
                         &.active {
                             background: #4f83cc;
+
+                            @include grid-media($neat-grid-tablet) {
+                              width: 100%;
+                              display: inline-block;
+                            }
+
+
+                          ;
 
                             a {
                                 color: $textLightPrimary;
@@ -286,7 +297,11 @@ body {
               font-size: 1.4rem;
 
               &:first-of-type{
-                // font-weight: 800;
+                font-weight: 600;
+                font-size: 1.6rem;
+                padding-bottom: .4rem;
+                margin-bottom: .8rem;
+                border-bottom: 1px solid $textLightHint;
 
               }
             }

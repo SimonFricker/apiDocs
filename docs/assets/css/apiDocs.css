@@ -3764,7 +3764,8 @@ body {
         .apiDocs .nav #navInner .docsNav ul {
           margin-top: 0;
           list-style: none;
-          padding: 0; }
+          padding: 0;
+          width: 100%; }
           .apiDocs .nav #navInner .docsNav ul li {
             padding: 0.7rem 1.4rem; }
             .apiDocs .nav #navInner .docsNav ul li a {
@@ -3772,6 +3773,10 @@ body {
               color: rgba(255, 255, 255, 0.7); }
             .apiDocs .nav #navInner .docsNav ul li.active {
               background: #4f83cc; }
+              @media only screen and (min-width: 768px) {
+                .apiDocs .nav #navInner .docsNav ul li.active {
+                  width: 100%;
+                  display: inline-block; } }
               .apiDocs .nav #navInner .docsNav ul li.active a {
                 color: white; }
     .apiDocs .nav .support {
@@ -3789,7 +3794,13 @@ body {
           .apiDocs .nav .support p {
             color: white;
             margin-bottom: 0;
-            font-size: 1.4rem; } }
+            font-size: 1.4rem; }
+            .apiDocs .nav .support p:first-of-type {
+              font-weight: 600;
+              font-size: 1.6rem;
+              padding-bottom: .4rem;
+              margin-bottom: .8rem;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
   .apiDocs .wrap {
     margin-top: 50px; }
     @media only screen and (min-width: 768px) {
