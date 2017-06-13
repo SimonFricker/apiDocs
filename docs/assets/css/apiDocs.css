@@ -3587,7 +3587,7 @@ body {
       display: flex; } }
   .apiDocs .relative {
     position: relative; }
-  .apiDocs .nav {
+  .apiDocs .navMain {
     width: calc(100%);
     float: left;
     margin-left: 0;
@@ -3603,18 +3603,18 @@ body {
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     background: #01579b; }
     @media only screen and (min-width: 768px) {
-      .apiDocs .nav {
+      .apiDocs .navMain {
         width: calc(16.66667%);
         float: left;
         margin-left: 0;
         position: relative;
         padding: 0;
         display: block; } }
-    .apiDocs .nav #navInner {
+    .apiDocs .navMain #navInner {
       width: calc(100%);
       float: left;
       margin-left: 0; }
-      .apiDocs .nav #navInner .brand {
+      .apiDocs .navMain #navInner .brand {
         min-height: 50px;
         text-align: center;
         float: left;
@@ -3627,14 +3627,14 @@ body {
         align-items: center;
         -ms-flex-pack: center;
         justify-content: center; }
-        .apiDocs .nav #navInner .brand h1 {
+        .apiDocs .navMain #navInner .brand h1 {
           margin: 0; }
         @media only screen and (min-width: 768px) {
-          .apiDocs .nav #navInner .brand {
+          .apiDocs .navMain #navInner .brand {
             padding: 4.2rem 1.4rem 1.4rem;
             display: block;
             float: none; } }
-      .apiDocs .nav #navInner .menu-toggle {
+      .apiDocs .navMain #navInner .menu-toggle {
         min-height: 50px;
         display: inline-block;
         float: right;
@@ -3647,17 +3647,17 @@ body {
         -ms-flex-pack: center;
         justify-content: center; }
         @media only screen and (min-width: 768px) {
-          .apiDocs .nav #navInner .menu-toggle {
+          .apiDocs .navMain #navInner .menu-toggle {
             display: none; } }
-        .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle {
+        .apiDocs .navMain #navInner .menu-toggle .btnToggle .toggle {
           width: 30px;
           height: 1px;
           margin-bottom: 3px;
           background-color: white;
           display: block; }
-          .apiDocs .nav #navInner .menu-toggle .btnToggle .toggle:last-of-type {
+          .apiDocs .navMain #navInner .menu-toggle .btnToggle .toggle:last-of-type {
             margin-bottom: 0; }
-      .apiDocs .nav #navInner .version {
+      .apiDocs .navMain #navInner .version {
         padding: 0.7rem 1.4rem;
         text-align: center;
         color: white;
@@ -3673,17 +3673,17 @@ body {
         -ms-flex-pack: center;
         justify-content: center; }
         @media only screen and (min-width: 768px) {
-          .apiDocs .nav #navInner .version {
+          .apiDocs .navMain #navInner .version {
             float: none;
             display: block; } }
-        .apiDocs .nav #navInner .version .form-group .dropdown {
+        .apiDocs .navMain #navInner .version .form-group .dropdown {
           position: relative;
           display: inline-block; }
-          .apiDocs .nav #navInner .version .form-group .dropdown::after, .apiDocs .nav #navInner .version .form-group .dropdown::before {
+          .apiDocs .navMain #navInner .version .form-group .dropdown::after, .apiDocs .navMain #navInner .version .form-group .dropdown::before {
             content: "";
             position: absolute;
             pointer-events: none; }
-          .apiDocs .nav #navInner .version .form-group .dropdown:after {
+          .apiDocs .navMain #navInner .version .form-group .dropdown:after {
             content: "\f123";
             position: absolute;
             top: 35%;
@@ -3691,7 +3691,7 @@ body {
             right: 1rem;
             font-family: "Ionicons";
             color: black; }
-          .apiDocs .nav #navInner .version .form-group .dropdown select {
+          .apiDocs .navMain #navInner .version .form-group .dropdown select {
             width: 100%;
             background-color: white;
             color: black;
@@ -3705,34 +3705,34 @@ body {
             text-overflow: '';
             -webkit-appearance: button;
             /* hide default arrow in chrome OSX */ }
-            .apiDocs .nav #navInner .version .form-group .dropdown select:focus {
+            .apiDocs .navMain #navInner .version .form-group .dropdown select:focus {
               outline: none; }
-            .apiDocs .nav #navInner .version .form-group .dropdown select option:first-child {
+            .apiDocs .navMain #navInner .version .form-group .dropdown select option:first-child {
               text-transform: uppercase; }
-        .apiDocs .nav #navInner .version span {
+        .apiDocs .navMain #navInner .version span {
           display: none; }
           @media only screen and (min-width: 768px) {
-            .apiDocs .nav #navInner .version span {
+            .apiDocs .navMain #navInner .version span {
               display: inline-block;
               margin-right: .4rem; } }
-      .apiDocs .nav #navInner .docsNav {
+      .apiDocs .navMain #navInner .docsNav {
         display: none; }
-        .apiDocs .nav #navInner .docsNav.active {
+        .apiDocs .navMain #navInner .docsNav.active {
           display: block;
           clear: both;
           margin: 0 auto;
           overflow: visible; }
         @media only screen and (min-width: 768px) {
-          .apiDocs .nav #navInner .docsNav {
+          .apiDocs .navMain #navInner .docsNav {
             display: block;
             padding-bottom: 10rem; } }
-        .apiDocs .nav #navInner .docsNav .search {
+        .apiDocs .navMain #navInner .docsNav .search {
           display: block;
           padding: 1.4rem; }
-          .apiDocs .nav #navInner .docsNav .search .form-group {
+          .apiDocs .navMain #navInner .docsNav .search .form-group {
             width: 100%;
             position: relative; }
-            .apiDocs .nav #navInner .docsNav .search .form-group input {
+            .apiDocs .navMain #navInner .docsNav .search .form-group input {
               font-size: 1.4rem;
               border-radius: 4rem;
               margin: 0 auto;
@@ -3743,46 +3743,55 @@ body {
               color: rgba(0, 0, 0, 0.54);
               font-family: "Open Sans", sans-serif;
               font-weight: 600; }
-              .apiDocs .nav #navInner .docsNav .search .form-group input::-webkit-input-placeholder {
+              .apiDocs .navMain #navInner .docsNav .search .form-group input::-webkit-input-placeholder {
                 color: rgba(0, 0, 0, 0.54); }
-              .apiDocs .nav #navInner .docsNav .search .form-group input::-moz-placeholder {
+              .apiDocs .navMain #navInner .docsNav .search .form-group input::-moz-placeholder {
                 color: rgba(0, 0, 0, 0.54); }
-              .apiDocs .nav #navInner .docsNav .search .form-group input:-ms-input-placeholder {
+              .apiDocs .navMain #navInner .docsNav .search .form-group input:-ms-input-placeholder {
                 color: rgba(0, 0, 0, 0.54); }
-              .apiDocs .nav #navInner .docsNav .search .form-group input::placeholder {
+              .apiDocs .navMain #navInner .docsNav .search .form-group input::placeholder {
                 color: rgba(0, 0, 0, 0.54); }
-              .apiDocs .nav #navInner .docsNav .search .form-group input:hover,
-              .apiDocs .nav #navInner .docsNav .search .form-group input :focus {
+              .apiDocs .navMain #navInner .docsNav .search .form-group input:hover,
+              .apiDocs .navMain #navInner .docsNav .search .form-group input :focus {
                 border: 1px solid rgba(17, 15, 123, 0.8);
                 outline: none; }
-            .apiDocs .nav #navInner .docsNav .search .form-group .addon {
+            .apiDocs .navMain #navInner .docsNav .search .form-group .addon {
               position: absolute;
               right: 0;
               padding: 0 1.4rem;
               line-height: 3rem;
               color: rgba(0, 0, 0, 0.54); }
-        .apiDocs .nav #navInner .docsNav ul {
+        .apiDocs .navMain #navInner .docsNav ul.nav {
           margin-top: 0;
           list-style: none;
           padding: 0;
           width: 100%; }
-          .apiDocs .nav #navInner .docsNav ul li {
-            padding: 0.7rem 1.4rem; }
-            .apiDocs .nav #navInner .docsNav ul li a {
-              text-decoration: none;
-              color: rgba(255, 255, 255, 0.7); }
-            .apiDocs .nav #navInner .docsNav ul li.active {
-              background: #4f83cc; }
-              @media only screen and (min-width: 768px) {
-                .apiDocs .nav #navInner .docsNav ul li.active {
-                  width: 100%;
-                  display: inline-block; } }
-              .apiDocs .nav #navInner .docsNav ul li.active a {
+          .apiDocs .navMain #navInner .docsNav ul.nav li a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 0.7rem 1.4rem;
+            display: block; }
+          .apiDocs .navMain #navInner .docsNav ul.nav li.active {
+            border-right: 3px solid #4f83cc; }
+            @media only screen and (min-width: 768px) {
+              .apiDocs .navMain #navInner .docsNav ul.nav li.active {
+                width: 100%;
+                display: inline-block; } }
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active a {
+              color: white; }
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav {
+              display: block; }
+              .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li a {
+                padding: 0.35rem 1.4rem;
+                color: rgba(255, 255, 255, 0.7); }
+              .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li.active a {
                 color: white; }
-    .apiDocs .nav .support {
+          .apiDocs .navMain #navInner .docsNav ul.nav li .nav {
+            display: none; }
+    .apiDocs .navMain .support {
       display: none; }
       @media only screen and (min-width: 768px) {
-        .apiDocs .nav .support {
+        .apiDocs .navMain .support {
           width: calc(16.66667%);
           float: left;
           margin-left: 0;
@@ -3791,11 +3800,11 @@ body {
           bottom: 0;
           padding: 1.4rem;
           background: #194571; }
-          .apiDocs .nav .support p {
+          .apiDocs .navMain .support p {
             color: white;
             margin-bottom: 0;
             font-size: 1.4rem; }
-            .apiDocs .nav .support p:first-of-type {
+            .apiDocs .navMain .support p:first-of-type {
               font-weight: 600;
               font-size: 1.6rem;
               padding-bottom: .4rem;
