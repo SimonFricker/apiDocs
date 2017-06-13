@@ -3774,7 +3774,7 @@ body {
               line-height: 3rem;
               color: rgba(0, 0, 0, 0.54); }
         .apiDocs .navMain #navInner .docsNav ul.nav {
-          margin: 0;
+          margin: 1.4rem 0;
           list-style: none;
           padding: 0;
           width: 100%; }
@@ -3789,7 +3789,8 @@ body {
             font-weight: 600;
             border-left: 3px solid transparent; }
           .apiDocs .navMain #navInner .docsNav ul.nav li ul.nav {
-            display: none; }
+            display: none;
+            margin: 0; }
           @media only screen and (min-width: 768px) {
             .apiDocs .navMain #navInner .docsNav ul.nav li.active {
               width: 100%;
