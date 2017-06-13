@@ -272,33 +272,11 @@ $('#navInner .menu-toggle a').on('click', function (ev) {
 
 
 //scrollspy
-
-        //
-        // $('[data-spy="scroll"]').each(function () {
-        //   var $spy = $(this).scrollspy('refresh')
-        // })
-
-// $(window).on("load resize scroll", function(e) {
-//
-//
-//   if($(window).width() > 768)
-//       {
-//         // $('body').scrollspy({ target: '.docsNav' })
-//
-//
-//
-//
-//       } else {
-//
-//       }
-//
-//   });
+$('body').scrollspy({ target: '.docsNav' })
 
 
 // Language position
 $(window).on("load resize scroll", function(e) {
-
-
   if($(window).width() > 768)
       {
         var widthss = $(".method-example").outerWidth();
@@ -306,7 +284,6 @@ $(window).on("load resize scroll", function(e) {
       } else {
 
       }
-
   });
 
 

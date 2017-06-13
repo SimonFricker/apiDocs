@@ -18,7 +18,6 @@
   "homepage": "https://github.com/SimonFricker/apiDocs#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
-    "bs-console-qrcode": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.1",

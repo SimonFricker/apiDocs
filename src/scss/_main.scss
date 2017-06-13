@@ -137,13 +137,13 @@ body {
                         }
 
                         &:after {
-                          content: "\f123";
-                          position: absolute;
-                          top: 35%;
-                          font-size: 1.4rem;
-                          right: 1rem;
-                          font-family: "Ionicons";
-                          color: black;
+                            content: "\f123";
+                            position: absolute;
+                            top: 35%;
+                            font-size: 1.4rem;
+                            right: 1rem;
+                            font-family: "Ionicons";
+                            color: black;
                         }
 
                         select {
@@ -153,7 +153,6 @@ body {
                             font-size: 1.6rem;
                             padding: 1rem 3.2rem 1rem 1.4rem;
                             text-align: right;
-
                             border: 0;
                             margin: 0;
                             border-radius: 5px;
@@ -179,7 +178,7 @@ body {
                     display: none;
                     @include grid-media($neat-grid-tablet) {
                         display: inline-block;
-                        margin-right: .4rem;
+                        margin-right: 0.4rem;
                     }
                 }
             }
@@ -192,12 +191,10 @@ body {
                     clear: both;
                     margin: 0 auto;
                     overflow: visible;
-
-
                 }
                 @include grid-media($neat-grid-tablet) {
                     display: block;
-                      padding-bottom: 10rem;
+                    padding-bottom: 10rem;
                 }
 
                 .search {
@@ -245,116 +242,94 @@ body {
                     margin-top: 0;
                     list-style: none;
                     padding: 0;
-                        width: 100%;
+                    width: 100%;
 
                     li {
-
-
                         a {
                             text-decoration: none;
                             color: $textLightSecondary;
-                              padding: $basePadding/2 $basePadding;
-                                  display: block;
-                                  font-weight: 600;
+                            padding: $basePadding/2 $basePadding;
+                            display: block;
+                            font-weight: 600;
+                            border-left: 3px solid transparent;
+                        }
 
-                                  border-left: 3px solid transparent;
+                        ul.nav{
+                          display: none;
                         }
 
                         &.active {
-
-
                             @include grid-media($neat-grid-tablet) {
-                              width: 100%;
-                              display: inline-block;
+                                width: 100%;
+                                display: inline-block;
                             }
-
-
-
 
                             a {
                                 color: $textLightPrimary;
-                                  border-left: 3px solid #4f83cc;
+                                border-left: 3px solid #4f83cc;
                             }
 
+                            ul.nav {
+                                display: block;
+                                margin-bottom: $basePadding/2;
 
+                                li {
+                                    a {
+                                        padding: $basePadding/4 $basePadding*1.6;
+                                        color: $textLightSecondary;
+                                        font-weight: 400;
+                                        font-size: 1.4rem;
+                                        border-left: 3px solid transparent;
+                                    }
 
-                            .nav{
-                              display: block;
-                              margin-bottom: $basePadding/2;
-                              li{
-                                a{
-                                    padding: $basePadding/4 $basePadding*1.6;
-                                    color: $textLightSecondary;
-                                    font-weight: 400;
-                                    font-size: 1.4rem;
-                                    border-left: 3px solid transparent;
+                                    &.active {
+                                        a {
+                                            color: $textLightPrimary;
+                                            font-weight: 600;
+                                            border-left: 3px solid #4f83cc;
+                                        }
+                                    }
                                 }
-
-                                &.active{
-                                  a{
-                                    color: $textLightPrimary;
-                                    font-weight: 600;
-                                      border-left: 3px solid #4f83cc;
-                                  }
-                                }
-                              }
                             }
                         }
 
-                        .nav{
-
-                          @include grid-media($neat-grid-tablet) {
-                            display: none;
-                          }
-
-
+                        .nav {
+                            @include grid-media($neat-grid-tablet) {
+                                display: none;
+                            }
                         }
-
-
                     }
-
 
 
                 }
             }
-
-
-
-
-
-
         }
 
-        .support{
-          display: none;
-          @include grid-media($neat-grid-tablet) {
-            @include grid-column(2, $custom-neat-grid);
-            display: block;
-            position: fixed;
-            bottom: 0;
-            padding: $basePadding;
-            background: darken($themeColorPrimary, 10);
+        .support {
+            display: none;
+            @include grid-media($neat-grid-tablet) {
+                 @include grid-column(2, $custom-neat-grid);
+                display: block;
+                position: fixed;
+                bottom: 0;
+                padding: $basePadding;
+                background: darken($themeColorPrimary, 10);
 
-            p{
-              color: $textLightPrimary;
-              margin-bottom: 0;
-              font-size: 1.4rem;
+                p {
+                    color: $textLightPrimary;
+                    margin-bottom: 0;
+                    font-size: 1.4rem;
 
-              &:first-of-type{
-                font-weight: 600;
-                font-size: 1.6rem;
-                padding-bottom: .4rem;
-                margin-bottom: .8rem;
-                border-bottom: 1px solid $textLightHint;
-
-              }
+                    &:first-of-type {
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        padding-bottom: 0.4rem;
+                        margin-bottom: 0.8rem;
+                        border-bottom: 1px solid $textLightHint;
+                    }
+                }
             }
-          }
-
-
-
         }
-
     }
 
     .wrap {
@@ -389,31 +364,24 @@ body {
         }
 
         .content {
-
-          flex: 1;
-          position: relative;
-              display: flow-root;
+            flex: 1;
+            position: relative;
+            display: flow-root;
             @include grid-media($neat-grid-tablet) {
                  @include grid-column(12, $custom-neat-grid);
             }
 
-
             .setLang {
                 // display: none;
-
                 display: block;
                 top: 0;
                 right: 0;
                 position: absolute;
-                    height: 4.2rem;
-                    width: 100%;
-
-                    padding: 0 $basePadding;
-
+                height: 4.2rem;
+                width: 100%;
+                padding: 0 $basePadding;
                 @include grid-media($neat-grid-tablet) {
                      @include grid-column(6,$custom-neat-grid);
-
-
                     // @include grid-push(2);
                     // @include grid-collapse();
                     padding: 0;
@@ -431,7 +399,6 @@ body {
                     li {
                         display: block;
                         float: left;
-
                         cursor: pointer;
                         padding: 0 1.6rem;
                         font-size: 1.6rem;
@@ -452,10 +419,8 @@ body {
 
             .method {
                 border-bottom: 1px solid $textDarkDivider;
-
                 display: flex;
                 flex-direction: column;
-
                 @include grid-media($neat-grid-tablet) {
                     display: flex;
                     flex-direction: row;
@@ -477,66 +442,62 @@ body {
                         padding: 0.4rem 0.8rem;
                     }
 
-                    h1{
-                      margin-bottom: 0;
+                    h1 {
+                        margin-bottom: 0;
                     }
 
-                    .badge{
-                      background: darken($codeHighlight, 30);
-                      color: white;
-                      font-size: 1.4rem;
-                      padding: .2rem .8rem;
-                      border-radius: .4rem;
-                      border: 1px solid $textDarkDivider;
-                      display: inline-block;
-                      vertical-align: middle;
+                    .badge {
+                        background: darken($codeHighlight, 30);
+                        color: white;
+                        font-size: 1.4rem;
+                        padding: 0.2rem 0.8rem;
+                        border-radius: 0.4rem;
+                        border: 1px solid $textDarkDivider;
+                        display: inline-block;
+                        vertical-align: middle;
                     }
 
-                    .info{
+                    .info {
+                        .feild {
+                            display: flex;
+                            margin-bottom: 0.8rem;
 
-                      .feild{
-                        display: flex;
-                         margin-bottom: .8rem;
-                        .key{
-                          flex: 1 0 0;
-                          text-align: right;
+                            .key {
+                                flex: 1 0 0;
+                                text-align: right;
 
-                          .response {
-                            font-size: 1.4rem;
-                            &.-error{
-                              color: $colorDanger;
+                                .response {
+                                    font-size: 1.4rem;
+
+                                    &.-error {
+                                        color: $colorDanger;
+                                    }
+
+                                    &.-success {
+                                        color: $colorSuccess;
+                                    }
+
+                                    &.-defalt {
+                                        color: $textDarkHint;
+                                    }
+                                }
+
+                                .badge {
+                                    background: darken($codeHighlight, 15);
+                                    margin-top: 0.4rem;
+                                }
                             }
 
-                            &.-success{
-                              color: $colorSuccess;
+                            .description {
+                                flex: 2 0 0;
+                                text-align: left;
+                                padding-left: 1.4rem;
+
+                                p {
+                                    margin-bottom: 0.2rem;
+                                }
                             }
-
-                            &.-defalt{
-                              color: $textDarkHint;
-                            }
-
-
-
-                          }
-                          .badge{
-                            background: darken($codeHighlight, 15);
-                                margin-top: .4rem;
-
-                          }
                         }
-
-                        .description{
-                           flex: 2 0 0;
-                           text-align: left;
-                           padding-left: 1.4rem;
-
-                           p{
-                             margin-bottom: .2rem;
-                           }
-
-
-                        }
-                      }
                     }
                 }
 

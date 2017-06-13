@@ -3714,7 +3714,7 @@ body {
           @media only screen and (min-width: 768px) {
             .apiDocs .navMain #navInner .version span {
               display: inline-block;
-              margin-right: .4rem; } }
+              margin-right: 0.4rem; } }
       .apiDocs .navMain #navInner .docsNav {
         display: none; }
         .apiDocs .navMain #navInner .docsNav.active {
@@ -3773,6 +3773,8 @@ body {
             display: block;
             font-weight: 600;
             border-left: 3px solid transparent; }
+          .apiDocs .navMain #navInner .docsNav ul.nav li ul.nav {
+            display: none; }
           @media only screen and (min-width: 768px) {
             .apiDocs .navMain #navInner .docsNav ul.nav li.active {
               width: 100%;
@@ -3780,16 +3782,16 @@ body {
           .apiDocs .navMain #navInner .docsNav ul.nav li.active a {
             color: white;
             border-left: 3px solid #4f83cc; }
-          .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav {
+          .apiDocs .navMain #navInner .docsNav ul.nav li.active ul.nav {
             display: block;
             margin-bottom: 0.7rem; }
-            .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li a {
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active ul.nav li a {
               padding: 0.35rem 2.24rem;
               color: rgba(255, 255, 255, 0.7);
               font-weight: 400;
               font-size: 1.4rem;
               border-left: 3px solid transparent; }
-            .apiDocs .navMain #navInner .docsNav ul.nav li.active .nav li.active a {
+            .apiDocs .navMain #navInner .docsNav ul.nav li.active ul.nav li.active a {
               color: white;
               font-weight: 600;
               border-left: 3px solid #4f83cc; }
@@ -3815,8 +3817,8 @@ body {
             .apiDocs .navMain .support p:first-of-type {
               font-weight: 600;
               font-size: 1.6rem;
-              padding-bottom: .4rem;
-              margin-bottom: .8rem;
+              padding-bottom: 0.4rem;
+              margin-bottom: 0.8rem;
               border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
   .apiDocs .wrap {
     margin-top: 50px; }
@@ -3919,15 +3921,15 @@ body {
             background: #a3a3ab;
             color: white;
             font-size: 1.4rem;
-            padding: .2rem .8rem;
-            border-radius: .4rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 0.4rem;
             border: 1px solid rgba(0, 0, 0, 0.12);
             display: inline-block;
             vertical-align: middle; }
           .apiDocs .wrap .content .method .method-description .info .feild {
             display: -ms-flexbox;
             display: flex;
-            margin-bottom: .8rem; }
+            margin-bottom: 0.8rem; }
             .apiDocs .wrap .content .method .method-description .info .feild .key {
               -ms-flex: 1 0 0px;
               flex: 1 0 0;
@@ -3942,14 +3944,14 @@ body {
                   color: rgba(0, 0, 0, 0.38); }
               .apiDocs .wrap .content .method .method-description .info .feild .key .badge {
                 background: #cbcbcf;
-                margin-top: .4rem; }
+                margin-top: 0.4rem; }
             .apiDocs .wrap .content .method .method-description .info .feild .description {
               -ms-flex: 2 0 0px;
               flex: 2 0 0;
               text-align: left;
               padding-left: 1.4rem; }
               .apiDocs .wrap .content .method .method-description .info .feild .description p {
-                margin-bottom: .2rem; }
+                margin-bottom: 0.2rem; }
         .apiDocs .wrap .content .method .method-example {
           width: calc(100%);
           float: left;
