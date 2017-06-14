@@ -235,6 +235,10 @@ body {
                         width: 100%;
                         position: relative;
 
+                        *{
+                          transition: all .4s ease-out;
+                        }
+
 
                         input {
                             font-size: 1.4rem;
@@ -242,7 +246,7 @@ body {
                             margin: 0 auto;
                             border: 0;
                             border-bottom: 1px solid $textLightSecondary;
-                            height: 3rem;
+                            height: 3.8rem;
                             padding-left: 0;
 
                             width: 100%;
@@ -258,7 +262,7 @@ body {
 
                             &:hover,
                             :focus {
-                                border: 1px solid $themeColorPrimary;
+                                border-bottom: 1px solid $textLightPrimary;
                                 outline: none;
                             }
                         }
@@ -268,8 +272,17 @@ body {
                             right: 0;
                             padding: 0 1.4rem;
                             line-height: 3rem;
-                            color: $textDarkSecondary;
+                            color: $textLightSecondary;
                         }
+
+                        &:hover,
+                        :focus {
+                          .addon {
+                              color: $textLightPrimary;
+                          }
+
+                        }
+
                     }
                 }
 
@@ -278,6 +291,11 @@ body {
                     list-style: none;
                     padding: 0;
                     width: 100%;
+                    *{
+                      transition: all .4s ease-out;
+                    }
+
+
 
                     @include grid-media($neat-grid-tablet) {
                         margin: $basePadding 0;

@@ -3736,13 +3736,15 @@ body {
           .apiDocs .navMain #navInner .docsNav .search .form-group {
             width: 100%;
             position: relative; }
+            .apiDocs .navMain #navInner .docsNav .search .form-group * {
+              transition: all .4s ease-out; }
             .apiDocs .navMain #navInner .docsNav .search .form-group input {
               font-size: 1.4rem;
               border-radius: 0;
               margin: 0 auto;
               border: 0;
               border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-              height: 3rem;
+              height: 3.8rem;
               padding-left: 0;
               width: 100%;
               outline: none;
@@ -3760,19 +3762,24 @@ body {
                 color: rgba(255, 255, 255, 0.7); }
               .apiDocs .navMain #navInner .docsNav .search .form-group input:hover,
               .apiDocs .navMain #navInner .docsNav .search .form-group input :focus {
-                border: 1px solid #17629B;
+                border-bottom: 1px solid white;
                 outline: none; }
             .apiDocs .navMain #navInner .docsNav .search .form-group .addon {
               position: absolute;
               right: 0;
               padding: 0 1.4rem;
               line-height: 3rem;
-              color: rgba(0, 0, 0, 0.54); }
+              color: rgba(255, 255, 255, 0.7); }
+            .apiDocs .navMain #navInner .docsNav .search .form-group:hover .addon,
+            .apiDocs .navMain #navInner .docsNav .search .form-group :focus .addon {
+              color: white; }
         .apiDocs .navMain #navInner .docsNav ul.nav {
           margin: 1.4rem 0;
           list-style: none;
           padding: 0;
           width: 100%; }
+          .apiDocs .navMain #navInner .docsNav ul.nav * {
+            transition: all .4s ease-out; }
           @media only screen and (min-width: 768px) {
             .apiDocs .navMain #navInner .docsNav ul.nav {
               margin: 1.4rem 0; } }
