@@ -3634,7 +3634,6 @@ body {
             padding: 2.8rem 1.4rem 1.4rem;
             display: block;
             float: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             margin: 0 1.4rem; } }
       .apiDocs .navMain #navInner .menu-toggle {
         min-height: 50px;
@@ -3695,9 +3694,6 @@ body {
             right: 1rem;
             font-family: "Ionicons";
             color: white; }
-            @media only screen and (min-width: 768px) {
-              .apiDocs .navMain #navInner .version .form-group .dropdown:after {
-                color: rgba(0, 0, 0, 0.87); } }
           .apiDocs .navMain #navInner .version .form-group .dropdown select {
             width: 100%;
             color: white;
@@ -3713,10 +3709,6 @@ body {
             text-overflow: '';
             -webkit-appearance: button;
             /* hide default arrow in chrome OSX */ }
-            @media only screen and (min-width: 768px) {
-              .apiDocs .navMain #navInner .version .form-group .dropdown select {
-                color: rgba(0, 0, 0, 0.87);
-                background-color: white; } }
             .apiDocs .navMain #navInner .version .form-group .dropdown select:focus {
               outline: none; }
             .apiDocs .navMain #navInner .version .form-group .dropdown select option:first-child {
@@ -3746,23 +3738,26 @@ body {
             position: relative; }
             .apiDocs .navMain #navInner .docsNav .search .form-group input {
               font-size: 1.4rem;
-              border-radius: 4rem;
+              border-radius: 0;
               margin: 0 auto;
-              border: 1px solid rgba(0, 0, 0, 0.12);
+              border: 0;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.7);
               height: 3rem;
+              padding-left: 0;
               width: 100%;
               outline: none;
-              color: rgba(0, 0, 0, 0.54);
+              color: white;
               font-family: "Open Sans", sans-serif;
-              font-weight: 600; }
+              font-weight: 600;
+              background: transparent; }
               .apiDocs .navMain #navInner .docsNav .search .form-group input::-webkit-input-placeholder {
-                color: rgba(0, 0, 0, 0.54); }
+                color: rgba(255, 255, 255, 0.7); }
               .apiDocs .navMain #navInner .docsNav .search .form-group input::-moz-placeholder {
-                color: rgba(0, 0, 0, 0.54); }
+                color: rgba(255, 255, 255, 0.7); }
               .apiDocs .navMain #navInner .docsNav .search .form-group input:-ms-input-placeholder {
-                color: rgba(0, 0, 0, 0.54); }
+                color: rgba(255, 255, 255, 0.7); }
               .apiDocs .navMain #navInner .docsNav .search .form-group input::placeholder {
-                color: rgba(0, 0, 0, 0.54); }
+                color: rgba(255, 255, 255, 0.7); }
               .apiDocs .navMain #navInner .docsNav .search .form-group input:hover,
               .apiDocs .navMain #navInner .docsNav .search .form-group input :focus {
                 border: 1px solid #17629B;
@@ -3788,6 +3783,8 @@ body {
             display: block;
             font-weight: 600;
             border-left: 3px solid transparent; }
+            .apiDocs .navMain #navInner .docsNav ul.nav li a:hover {
+              color: white; }
           .apiDocs .navMain #navInner .docsNav ul.nav li ul.nav {
             display: none;
             margin: 0; }
@@ -3852,6 +3849,8 @@ body {
       @media only screen and (min-width: 768px) {
         .apiDocs .wrap .header {
           padding: 11.2rem 2.8rem 5.6rem; } }
+      .apiDocs .wrap .header:focus {
+        outline: none; }
       .apiDocs .wrap .header.-main {
         background: #9FA8DA;
         background: linear-gradient(to right, #9FA8DA, #5C6BC0); }

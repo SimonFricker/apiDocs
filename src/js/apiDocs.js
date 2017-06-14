@@ -65,7 +65,16 @@ $('#navInner .menu-toggle a').on('click', function (ev) {
 
 
 //scrollspy
-$('body').scrollspy({ target: '.docsNav', offset:120 })
+
+
+$(window).on("load resize scroll", function(e) {
+  if($(window).width() > 768)
+      {
+        $('body').scrollspy({ target: '.docsNav', offset:0 })
+      } else {
+        $('body').scrollspy({ target: '.docsNav', offset:120 })
+      }
+  });
 
 
 // Language position

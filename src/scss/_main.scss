@@ -76,7 +76,6 @@ body {
                     padding: $basePadding*2 $basePadding $basePadding;
                     display: block;
                     float: none;
-                    border-bottom: 1px solid $textLightHint;
                     margin: 0 $basePadding;
                 }
             }
@@ -154,10 +153,10 @@ body {
                             font-family: "Ionicons";
                             color: $textLightPrimary;
 
-                            @include grid-media($neat-grid-tablet) {
-                                // top: 35%;
-                                color: $textDarkPrimary;
-                            }
+                            // @include grid-media($neat-grid-tablet) {
+                            //     // top: 35%;
+                            //     color: $textDarkPrimary;
+                            // }
 
                         }
 
@@ -184,11 +183,11 @@ body {
                             -webkit-appearance: button;
                             /* hide default arrow in chrome OSX */
 
-                            @include grid-media($neat-grid-tablet) {
-                                // padding: 1rem 3.2rem 1rem 1.4rem;
-                                color: $textDarkPrimary;
-                                                            background-color: $textLightPrimary;
-                            }
+                            // @include grid-media($neat-grid-tablet) {
+                            //     // padding: 1rem 3.2rem 1rem 1.4rem;
+                            //     color: $textDarkPrimary;
+                            //                                 background-color: $textLightPrimary;
+                            // }
 
                             &:focus {
                                 outline: none;
@@ -230,24 +229,31 @@ body {
                     display: block;
                     padding: $basePadding;
 
+
+
                     .form-group {
                         width: 100%;
                         position: relative;
 
+
                         input {
                             font-size: 1.4rem;
-                            border-radius: 4rem;
+                            border-radius: 0;
                             margin: 0 auto;
-                            border: 1px solid $textDarkDivider;
+                            border: 0;
+                            border-bottom: 1px solid $textLightSecondary;
                             height: 3rem;
+                            padding-left: 0;
+
                             width: 100%;
                             outline: none;
-                            color: $textDarkSecondary;
+                            color: $textLightPrimary;
                             font-family: $fontBody;
                             font-weight: 600;
+                            background: transparent;
 
                             &::placeholder {
-                                color: $textDarkSecondary;
+                                color: $textLightSecondary;
                             }
 
                             &:hover,
@@ -286,6 +292,10 @@ body {
                             display: block;
                             font-weight: 600;
                             border-left: 3px solid transparent;
+
+                            &:hover{
+                              color: $textLightPrimary;
+                            }
                         }
 
                         ul.nav{
@@ -384,6 +394,11 @@ body {
             @include grid-media($neat-grid-tablet) {
               padding: $basePadding*8 $basePadding*2 $basePadding*4;
             }
+
+            &:focus{
+              outline: none;
+            }
+
 
 
             &.-main {
