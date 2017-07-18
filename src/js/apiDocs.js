@@ -22,34 +22,18 @@ hljs.initHighlightingOnLoad();
 
 
 //smoothscroll
-$('a[href^="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-        // On-page links
-        if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top-80
-                }, 1000, function() {
-                    var $target = $(target);
-                    $target.focus();
-                    if ($target.is(":focus")) { // Checking if the target was focused
-                        return false;
-                    } else {
-                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                        $target.focus(); // Set focus again
-                    };
-                });
-            }
-        }
+$(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+        var target = $(this.hash);
+        var hash = this.hash;
+        if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+        if (target.length == 0) target = $('html');
+        $('html, body').animate({ scrollTop: target.offset().top }, 500, function (){
+            location.hash = hash;
+        });
+        return false;
     });
+});
 
 
 ///menu toggle
@@ -65,8 +49,6 @@ $('#navInner .menu-toggle a').on('click', function (ev) {
 
 
 //scrollspy
-
-
 $(window).on("load resize scroll", function(e) {
   if($(window).width() > 768)
       {
@@ -76,7 +58,6 @@ $(window).on("load resize scroll", function(e) {
       }
   });
 
-
 // Language position
 $(window).on("load resize scroll", function(e) {
   if($(window).width() > 768)
@@ -85,9 +66,8 @@ $(window).on("load resize scroll", function(e) {
         $(".setLang").width(widthss);
       } else {
 
-      }
-  });
-
+    }
+});
 
 // Language tabs
 $(document).ready(function() {
